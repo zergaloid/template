@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+        }
+        div
+        {
+            flex: 1;
+        }
+    </style>
+    <script src="lib/index.js"></script>
+</head>
+
+<body>
+    <div id="st">
+        []
+    </div>
+    <script>
+        dyn('Call/Call', '#st', {
+            constraints: {
+                video: true,
+                audio: true
+            }
+        })
+    </script>
+</body>
+
+</html>
