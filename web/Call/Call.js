@@ -1,17 +1,17 @@
-navigator.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 const stream = navigator.mediaDevices.getUserMedia(
     config.constraints
-);
-stream.then(streamlet => {
-    document.querySelector(`${config.namespace} > #call`).srcObject = streamlet;
+).then(streamlet => {
+    var recorder = new MediaRecorder(streamlet);
+    let video = document.querySelector(`${config.namespace} > #call`);
+
+    recorder.start(30);
+    setInterval(() => {
+        recorder.requestData()
+    }, 3000);
+
+    recorder.ondataavailable = function (e) {
+        console.log(e.data)
+    }
+
+    video.srcObject = streamlet;
 })
-pc = new RTCPeerConnection();
-sg = new WebSocket('ws://128.0.128.26:8000');
-sg.onmessage = (msg) => {
-    console.log(msg)
-};
-sg.onopen = (e) => {
-    console.log(e)
-    sg.send('JOIN.conn');
-    sg.send(`SEND.conn A`);
-}
