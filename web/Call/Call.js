@@ -1,8 +1,6 @@
-const socket = new WebSocket('wss://localhost:8000')
-
-const stream = navigator.mediaDevices.getUserMedia(
-    config.constraints
-).then(streamlet => {
-    let video = document.querySelector(`${config.namespace} > #call`);
-    
-})
+navigator.mediaDevices.getUserMedia(config.constraints).then((streamlet) => {
+    let video = document.querySelector(`${config.namespace} > #call`)
+    video.srcObject = streamlet;
+}).catch(function (err) {
+    alert("Camera not found")
+});
