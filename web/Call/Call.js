@@ -67,8 +67,6 @@ peerConnection.addEventListener('connectionstatechange', event => {
     console.log(peerConnection.connectionState)
 });
 
-
-
 sg.onopen = async () => {
     let callButton = document.querySelector(`${config.namespace} > #callButton`)
     callButton.addEventListener('click', e => callTo(channel))
