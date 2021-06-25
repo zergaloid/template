@@ -24,15 +24,18 @@
 <body>
     <div id="st">
         []
+        <button id="callOn">Call</button>
     </div>
     <script>
         dyn('Call/Call', '#st', {
             role: "caller",
+            callButton: "#callOn",
             constraints:
             {
                 video: true
             }
         })
+
     </script>
 </body>
 
