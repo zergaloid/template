@@ -1,6 +1,5 @@
-
-
 require('dotenv').config()
+
 
 const fs = require('fs');
 const https = require('https');
@@ -44,8 +43,6 @@ ws.config({
         });
     }
 })
-
-
 
 const port = process.env.WS_PORT || obj.port || 8080
 server.listen(port)

@@ -22,13 +22,13 @@
 </head>
 
 <body>
-    <div id="caller">
+    <div id="callee">
         []
     </div>
     <button id="callButton">Call</button>
     <script>
-            dyn('Call/Call', '#caller', {
-                selector: "room-cfd/caller",
+            dyn('Call/Call', '#callee', {
+                selector: "room-cfd/callee",
                 wss: "wss://srgl.cc:8000",
                 constraints:
                 {
