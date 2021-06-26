@@ -22,18 +22,31 @@
 </head>
 
 <body>
-    <div id="st">
+    <div id="caller">
         []
-        <button id="callOn">Call</button>
     </div>
+    <div id="callee">
+        []
+    </div>
+    <button id="callButton">Call</button>
     <script>
-        dyn('Call/Call', '#st', {
-            wsHost: "wss://srgl.cc:8000",
-            callButton: "#callOn",
-            constraints:
-            {
-                video: true
-            }
+        document.getElementById("callButton").addEventListener("click", e => {
+            dyn('Call/Call', '#caller', {
+                selector: "room-cfd/caller",
+                wss: "wss://srgl.cc:8000",
+                constraints:
+                {
+                    video: true
+                }
+            })
+            dyn('Call/Call', '#caller', {
+                selector: "room-cfd/callee",
+                wss: "wss://srgl.cc:8000",
+                constraints:
+                {
+                    video: true
+                }
+            })
         })
     </script>
 </body>

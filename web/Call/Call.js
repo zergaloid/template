@@ -1,12 +1,12 @@
-let sg = new WebSocket(config.wsHost);
+let socket = new WebSocket(config.wss);
 
-sg.onopen = async () => {
-    let callButton = document.querySelector(config.callButton)
-    callButton.addEventListener('click', e => callTo(channel))
-    sg.send(`JOIN.${channel}`)
+let channel = config.channel;
+let video = document.querySelector(`${config.namespace} > video`)
+
+socket.onopen = async () => {
+    socket.send(`JOIN.${channel}`)
 }
 
 navigator.mediaDevices.getUserMedia(config.constraints).then((streamlet) => {
-    let video = document.querySelector(`${config.namespace} > #call`)
     video.srcObject = streamlet;
 })
