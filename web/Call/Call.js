@@ -1,4 +1,4 @@
-let sg = new WebSocket(config.host);
+let sg = new WebSocket(config.wsHost);
 
 sg.onopen = async () => {
     let callButton = document.querySelector(config.callButton)

@@ -6,7 +6,7 @@
   "scripts": {
     "ix": "node src/ix.js",
     "ix:dev": "NODE_ENV=development nodemon src/ix.js",
-    "cat:dev": "wscat -P --slash --no-check --connect wss://localhost:8000",
+    "cat:dev": "wscat -P --slash --no-check --connect wss://srgl.cc:8000",
     "test:dev": "jest"
   },
   "dependencies": {
