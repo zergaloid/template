@@ -15,8 +15,6 @@ var xhr = new XMLHttpRequest();
 
 socket.onopen = async () => {
     socket.send(`JOIN.${selector.room}`)
-    if(selector.role == 'caller')
-      socket.send(`SEND.${selector.room} callee/test`)
 }
 
 socket.onmessage = async(e) => {
@@ -26,14 +24,20 @@ socket.onmessage = async(e) => {
       content: message[1]
     }
     if(message.to == selector.role)
-      console.log(message)
+    {
+      vp8 = JSON.parse(message.content)
+      console.log(vp8)
+    }
 }
 
 navigator.mediaDevices.getUserMedia(config.constraints).then((streamlet) => {
     let recorder = new MediaRecorder(streamlet);
-    recorder.start(300)
+    recorder.start(30)
+    if(selector.role == 'caller')
     recorder.ondataavailable = async (e) => {
-      data = e.data
-      console.log(data)
+      data = await e.data.arrayBuffer()
+      data = new Uint8Array(data)
+      data = JSON.stringify(data)
+      socket.send(`SEND.${selector.room} callee/${data}`)
     }
 })
