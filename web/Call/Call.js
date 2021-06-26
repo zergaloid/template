@@ -1,7 +1,4 @@
 let sg = new WebSocket(config.host);
-
-const channel = config.channel
-
 var trimRecv = (recv) => recv.slice(`RECV.${channel} `.length)
 
 async function callTo(channel) {

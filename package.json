@@ -1,0 +1,9 @@
+{
+  "name": "syncia",
+  "scripts": {
+    "sync:dev": "nodemon --exec 'rsync -avzhe ssh srgl.cc:/var/code' $(pwd)"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
