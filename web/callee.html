@@ -22,14 +22,13 @@
 </head>
 
 <body>
-    <div id="callee">
+    <div id="call">
         []
     </div>
-    <button id="callButton">Call</button>
     <script>
-            dyn('Call/Call', '#callee', {
+            dyn('Call/Call', '#call', {
                 selector: "room-cfd/callee",
-                wss: "wss://srgl.cc:8000",
+                wss: "wss://ws.srgl.cc:8000",
                 constraints:
                 {
                     video: true

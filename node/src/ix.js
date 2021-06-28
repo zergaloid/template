@@ -17,28 +17,24 @@ ws.config({
     // WS server handler
     handler: (sock) => {
         sock.ws.on('message', (message) => {
-            if (Buffer.isBuffer(message)) {
-                sock.wss.Channel.sendTo('stream', message)
-            }
-            else {
-                let call = message.split(' ')[0]
-                let cmd =
-                {
-                    call: call.split('.'),
-                    arg: message.slice(call.length + 1)
-                };
-                switch (cmd.call[0]) {
-                    case 'SEND':
-                        if (process.env.NODE_ENV == 'development')
-                          console.info(`SEND ${cmd.call[1]}`)
-                        sock.wss.Channel.sendTo(cmd.call[1], `RECV.${cmd.call[1]} ${cmd.arg}`)
-                        break;
-                    case 'JOIN':
-                        if (process.env.NODE_ENV == 'development')
-                          console.info(`JOIN ${cmd.call[1]}`)
-                        sock.wss.Channel.addTo(cmd.call[1], sock.ws._socket.server.sessionIdContext)
-                        break;
-                }
+            let call = message.split(' ')[0]
+            let cmd =
+            {
+                call: call.split('.'),
+                arg: message.slice(call.length + 1)
+            };
+            switch (cmd.call[0]) {
+                case 'SEND':
+                    if (process.env.NODE_ENV == 'development')
+                        console.info(`SEND ${cmd.call[1]}`)
+                    sock.wss.Channel.sendTo(cmd.call[1], `RECV.${cmd.call[1]} ${cmd.arg}`)
+                    break;
+                case 'JOIN':
+                    if (process.env.NODE_ENV == 'development')
+                        console.info(`JOIN ${cmd.call[1]}`)
+                    console.log(sock.ws)
+                    sock.wss.Channel.addTo(cmd.call[1], sock.ws)
+                    break;
             }
         });
     }

@@ -10,11 +10,8 @@ module.exports =
                 sendTo: (rec, msg) => {
                     return module.exports.channel.sendTo(this.wss, rec, msg);
                 },
-                addTo: (rec, id) => {
-                    return module.exports.channel.addTo(this.wss, rec, id);
-                },
-                has: (rec, id) => {
-                    return module.exports.channel.has(this.wss, rec, id);
+                addTo: (rec, client) => {
+                    return module.exports.channel.addTo(this.wss, rec, client);
                 },
                 create: (rec) => {
                     return module.exports.channel.create(this.wss, rec);
@@ -43,28 +40,25 @@ module.exports =
     },
     channel:
     {
-        has: (wss, rec, id) => {
-            if (!wss._channels[rec])
-                wss.Channel.create(rec);
-            return wss._channels[rec].includes(id);
-        },
         create: (wss, rec) => {
             wss._channels[rec] = [];
         },
-        addTo: (wss, rec, id) => {
+        addTo: (wss, rec, client) => {
             if (!wss._channels[rec])
                 wss.Channel.create(rec);
-            wss._channels[rec].push(id);
+            wss._channels[rec].push(client);
         },
         sendTo(wss, rec, msg) {
-            [...wss.srv.clients].filter(client => {
-                let id = client._socket.server.sessionIdContext
-                return rec == "all" ? true : wss.Channel.has(rec, id);
-            }).forEach(client => {
-                if (client.readyState === require('ws').OPEN) {
+            console.log(rec)
+            try {
+                wss._channels[rec].forEach(client => {
                     client.send(msg);
-                }
-            })
+                })
+            }
+            catch (err) {
+                console.error(err)
+                console.error('no clients in channel')
+            }
         }
     }
 }
