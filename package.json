@@ -1,7 +1,7 @@
 {
   "name": "syncia",
   "scripts": {
-    "sync:dev": "nodemon --exec 'rsync -avz $(pwd) service@ws.srgl.cc:/var/code'",
+    "sync:dev": "nodemon --exec 'rsync -avz $(pwd) service@srgl.cc:/var/code'",
     "node:dev": "cd node && yarn run ix:dev"
   },
   "devDependencies": {

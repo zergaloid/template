@@ -27,15 +27,14 @@
     </div>
     <button id="callButton">Call</button>
     <script>
-        dyn('Call/Call', '#st', {
-            role: "caller",
-            callButton: "#callOn",
-            constraints:
-            {
-                video: true
-            }
-        })
-
+            dyn('Call/Call', '#caller', {
+                selector: "room-cfd/caller",
+                wss: "wss://srgl.cc:8000",
+                constraints:
+                {
+                    video: true
+                }
+            })
     </script>
 </body>
 

@@ -1,87 +1,20 @@
-let sg = new WebSocket('wss://srgl.cc:8000');
-const channel = config.channel
-const peerConnection = new RTCPeerConnection(
-    { 'iceServers': [{ 'urls': 'stun:stun.l.google.com:19302' }] }
-);
+let socket = new WebSocket(config.wss);
 
-var trimRecv = (recv) => recv.slice(`RECV.${channel} `.length)
-
-async function callTo(channel) {
-    const offer = await peerConnection.createOffer({
-        'offerToReceiveAudio': true,
-        'offerToReceiveVideo': true
-    });
-    await peerConnection.setLocalDescription(offer);
-
-    sg.send(`SEND.${channel} ${JSON.stringify(offer)}`);
-    sg.onmessage = async (message) => {
-        message = trimRecv(message.data)
-        if(message.startsWith('ice'))
-        {
-            message = message.slice('ice '.length)
-            message = JSON.parse(message)
-            await peerConnection.addIceCandidate(message);
-        }
-        else if (message !== JSON.stringify(offer)) {
-            message = JSON.parse(message)
-
-            await peerConnection.setRemoteDescription(new RTCSessionDescription(message));
-        }
-    };
+// Room/Role selector, specifies both
+let selector = config.selector.split('/');
+selector = {
+  room: selector[0],
+  role: selector[1]
 }
+// RECV-trimming function
+let trim = (s) => s.slice(`RECV.${selector.room} `.length)
+// Local video <element>
+let video = document.querySelector(`${config.namespace} > video`)
+let link = ''
+var xhr = new XMLHttpRequest();
 
-var answer = ""
-
-sg.onmessage = async (message) => {
-    message = message.data
-    message = trimRecv(message)
-    if(message.startsWith('ice'))
-    {
-        message = message.slice('ice '.length)
-        message = JSON.parse(message)
-        await peerConnection.addIceCandidate(message);
-    }
-    else if (message !== JSON.stringify(answer)) {
-        message = JSON.parse(message)
-
-        peerConnection.setRemoteDescription(new RTCSessionDescription(message));
-        answer = await peerConnection.createAnswer();
-        await peerConnection.setLocalDescription(answer);
-        sg.send(`SEND.${channel} ${JSON.stringify(answer)}`);
-        sg.send(`JOIN.${channel}/ice`)
-    }
-};
-
-peerConnection.addEventListener('icecandidate', event => {
-    if (event.candidate) {
-        sg.send(`SEND.${channel}/ice ${JSON.stringify(event.candidate)}`);
-    }
-});
-
-if(answer == "")
-peerConnection.addEventListener('iceconnectionstatechange', event => {
-    switch(peerConnection.iceConnectionState)
-    {
-      case 'connected':
-        let dc = peerConnection.createDataChannel("dc");
-      dc.onopen = function(event) {
-        channel.send('Hi you!');
-      }
-      dc.onmessage = function(event) {
-        console.log(event.data);
-      }
-        break;
-    }
-});
-
-peerConnection.ondatachannel = function(event) {
-  var dc = event.channel;
-    dc.onopen = function(event) {
-    dc.send('Hi back!');
-  }
-  dc.onmessage = function(event) {
-    console.log(event.data);
-  }
+socket.onopen = async () => {
+    socket.send(`JOIN.${selector.room}`)
 }
 
 socket.onmessage = async(e) => {
