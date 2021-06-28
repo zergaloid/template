@@ -1,13 +1,13 @@
 ## Syncia Monorepo
 
 1. node/ is for the websocket sync node:
-
+    
     SEND.\<channel>
-
+    
     JOIN.\<channel>
 
     Messages arrive in the following format:
-
+    
     RECV.\<channel> \<message>
 
 Setup requires an .env and snakeoil certs in /var/snakeoil:
