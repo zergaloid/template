@@ -32,7 +32,6 @@ ws.config({
                 case 'JOIN':
                     if (process.env.NODE_ENV == 'development')
                         console.info(`JOIN ${cmd.call[1]}`)
-                    console.log(sock.ws)
                     sock.wss.Channel.addTo(cmd.call[1], sock.ws)
                     break;
             }

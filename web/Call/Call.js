@@ -1,5 +1,13 @@
 let socket = new WebSocket(config.wss);
-const peer = new RTCPeerConnection({ 'iceServers': [{ 'urls': 'stun:stun.l.google.com:19302' }] });
+const peer = new RTCPeerConnection({
+  iceServers: [
+    {
+      urls: 'turn:numb.viagenie.ca',
+      credential: 'ygZLQaRAs7Dqc8w',
+      username: 'zergal@zergal.net'
+    },
+  ]
+});
 
 // Room/Role selector, specifies both
 let selector = config.selector.split('/');
@@ -25,8 +33,7 @@ switch (selector.role) {
       socket.send(`JOIN.${selector.room}_a`)
 
       let offer = await peer.createOffer({
-        'offerToReceiveAudio': false,
-        'offerToReceiveVideo': true
+        'offerToReceiveVideo': 1
       })
       peer.setLocalDescription(new RTCSessionDescription(offer))
 
@@ -52,6 +59,8 @@ socket.onmessage = async (e) => {
   offer = helpers.trim(e.data)
   offer = JSON.parse(offer)
 
+  console.log(peer)
+
   await peer.setRemoteDescription(new RTCSessionDescription(offer))
   switch (selector.role) {
     case 'callee':
@@ -59,19 +68,20 @@ socket.onmessage = async (e) => {
       await peer.setLocalDescription(new RTCSessionDescription(answer));
       helpers.answer(answer)
       break;
-    case 'caller':
-      socket.send(`JOIN.${selector.room}_i`)
-      socket.onmessage = async (se) => {
-        icec = helpers.trim(se.data)
-        icec = JSON.parse(icec)
+  }
+  if (peer.remoteDescription) {
+    socket.send(`JOIN.${selector.room}_i`)
+    socket.onmessage = async (se) => {
+      icec = helpers.trim(se.data)
+      icec = JSON.parse(icec)
 
-        try {
-          await peer.addIceCandidate(icec);
-        } catch (e) {
-          console.error('Error adding received ice candidate', e, icec);
-        }
+      icec.usernameFragment = null;
+      try {
+        await peer.addIceCandidate(icec);
+      } catch (e) {
+        console.error('Error adding received ice candidate', e, icec);
       }
-      break;
+    }
   }
 }
 
@@ -80,20 +90,15 @@ navigator.mediaDevices.getUserMedia(config.constraints).then((streamlet) => {
     video.srcObject = streamlet;
   }
   peer.oniceconnectionstatechange = function (event) {
-    if (peer.iceConnectionState == 'connected' && selector.role == 'caller') {
-      setTimeout(() => {
-        console.log(streamlet)
-        streamlet.getVideoTracks().forEach((track, i, a) => {
-          console.log(track)
-          peer.addTrack(track, streamlet);
-        });
-      }, 300);
-    }
-    console.log(peer)
+   // console.log(`EFFECT:`, peer)
   };
-
   peer.ontrack = async (event) => {
     console.log(event)
     video.srcObject = event.streams[0];
   };
+  if (selector.role == 'caller') {
+    streamlet.getVideoTracks().forEach(track => {
+      peer.addTrack(track)
+    })
+  }
 })
