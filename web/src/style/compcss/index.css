@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+div {
+  flex: 1;
+}
+
+div#serverbar {
+  display: inline-block;
+  height: 35px;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+}
+
+div#call video {
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  filter: drop-shadow(4px 4px 6px #BBBAFF);
+}
+/*# sourceMappingURL=index.css.map */
