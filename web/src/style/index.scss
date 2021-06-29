@@ -17,18 +17,42 @@ div
 div#serverbar
 {
     display: inline-block;
-    height: 35px;
-    border: 3px solid #000000;
+    height: 40px;
+    width: 100%;
     box-sizing: border-box;
+
+    button
+    {
+        width: 150px;
+        height: 35px;
+        background-color: #00000000;
+
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        border-radius: 2px;
+        transition: all 0.25s;
+    }
+
+    button:hover
+    {
+        border: 2px solid #000000;
+        border-radius: 4px;
+        transition: all 0.25s;
+    }
 }
 
 div#call
 {
     video
     {
+        position: absolute;
         border: 3px solid #000000;
         box-sizing: border-box;
         border-radius: 10px;
+
+        top: 50%; /* Position Y halfway in */
+        left: 50%; /* Position X halfway in */
+        transform: translate(-50%,-50%);
 
         filter: drop-shadow(4px 4px 6px #BBBAFF);
     }
