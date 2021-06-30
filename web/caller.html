@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src\style\compcss\index.css">
+    <script src="https://zergal.net/lib/index.js"></script>
+</head>
+<body>
+    <div id="call">
+        []
+    </div>
+    <script>
+            dyn('Call/Call', '#call', {
+                selector: "room-cfd/caller",
+                wss: "wss://ws.srgl.cc:8000",
+                constraints:
+                {
+                    video: true
+                }
+            })
+    </script>
+</body>
+</html>
