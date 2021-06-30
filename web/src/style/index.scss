@@ -19,13 +19,16 @@ div#serverbar
     display: inline-block;
     height: 40px;
     width: 100%;
+    padding: 2.5px;
     box-sizing: border-box;
+    filter: drop-shadow(4px 4px 2px #BBBAFF7F);
 
     button
     {
         width: 150px;
         height: 35px;
         background-color: #00000000;
+        filter: drop-shadow(4px 4px 2px #BBBAFF7F);
 
         border: 2px solid #000000;
         box-sizing: border-box;
@@ -35,6 +38,8 @@ div#serverbar
 
     button:hover
     {
+        filter: drop-shadow(4px 4px 2px #BBBAFF7F);
+        background-color: #00000020;
         border: 2px solid #000000;
         border-radius: 4px;
         transition: all 0.25s;
@@ -54,7 +59,7 @@ div#call
         left: 50%; /* Position X halfway in */
         transform: translate(-50%,-50%);
 
-        filter: drop-shadow(4px 4px 6px #BBBAFF);
+        filter: drop-shadow(4px 4px 6px #BBBAFF7F);
     }
 
 }
