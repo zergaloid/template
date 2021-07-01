@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="src\style\compcss\index.css">
     <script src="https://zergal.net/lib/index.js"></script>
 </head>
+
 <body>
     <div id="call">
         []
     </div>
     <script>
-            dyn('Call/Call', '#call', {
-                selector: "room-cfd/caller",
+            dyn('/src/modules/Call/Call', '#call', {
+                selector: "room-cfd/callee",
                 wss: "wss://ws.srgl.cc:8000",
                 constraints:
                 {
@@ -20,4 +22,5 @@
             })
     </script>
 </body>
+
 </html>

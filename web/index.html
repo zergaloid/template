@@ -3,19 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src\style\compcss\index.css">
+    <link rel="stylesheet" href="src/style/compcss/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://zergal.net/lib/index.js"></script>
-    <script src="src\modulehandler.js"></script>
 </head>
 
 <body>
-    <!-- Serverbar was moved to serverbar.html -->
-    <div module="src\modules\serverbar.html"></div>
-    <!-- Call/Call was moved to caller.html -->
-    <div module="src\modules\caller.html"></div>
+    <div id="server-bar">[]
+    </div>
     <script>
-        includeHTML();
+        dyn("/src/modules/Bar/Server", "#server-bar", {})
     </script>
 </body>
 
