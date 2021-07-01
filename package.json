@@ -2,7 +2,8 @@
   "name": "syncia",
   "scripts": {
     "sync:dev": "nodemon --exec 'rsync  -av $(pwd) zergal@srgl.cc:/var/code'",
-    "node:dev": "cd node && yarn run ix:dev"
+    "node:dev": "cd node && yarn run ix:dev",
+    "web:dev": "npx sirv web --dev"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
