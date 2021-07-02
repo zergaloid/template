@@ -17,7 +17,10 @@ div {
   flex: 1;
 }
 
-div#serverbar {
+div#server-bar {
+  flex: 0;
+  position: fixed;
+  z-index: 2;
   display: inline-block;
   height: 40px;
   width: 100%;
@@ -26,30 +29,80 @@ div#serverbar {
   filter: drop-shadow(0px 0px 0px #BBBAFF7F);
 }
 
-div#serverbar button {
+div#server-bar button {
   width: 150px;
   height: 35px;
   background-color: #00000000;
   filter: drop-shadow(4px 4px 2px #BBBAFF7F);
   border: 2px solid #000000;
   box-sizing: border-box;
-  border-radius: 2px;
-  transition: all 0.25s;
-}
-
-div#serverbar button:hover {
-  filter: drop-shadow(4px 4px 2px #BBBAFF7F);
-  background-color: #00000020;
-  border: 2px solid #000000;
   border-radius: 4px;
   transition: all 0.25s;
 }
 
-div#serverbar button:active {
+div#server-bar button:hover {
+  filter: drop-shadow(4px 4px 2px #BBBAFF7F);
+  background-color: #00000020;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  transition: all 0.25s;
+}
+
+div#server-bar button:active {
   background-color: #00000040;
   color: #666666;
   border: 2px solid #000000;
-  border-radius: 6px;
+  border-radius: 16px;
+  transition: all 0.05s;
+  filter: drop-shadow(0px 0px 0px #BBBAFF7F);
+}
+
+div#side-bar {
+  z-index: 0;
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 40px;
+  height: 100%;
+  width: 40px;
+  padding: 2.5px 0px 2.5px 2.5px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 0px #BBBAFF7F);
+}
+
+div#side-bar button {
+  width: 40px;
+  height: 40px;
+  background-color: #00000000;
+  filter: drop-shadow(4px 4px 2px #BBBAFF7F);
+  display: block;
+  margin: 5px 0px;
+  border: 2px solid #000000;
+  border-right-style: none;
+  box-sizing: border-box;
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  transition: all 0.25s;
+}
+
+div#side-bar button:hover {
+  filter: drop-shadow(4px 4px 2px #BBBAFF7F);
+  background-color: #00000020;
+  border: 2px solid #000000;
+  border-right-style: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: all 0.25s;
+}
+
+div#side-bar button:active {
+  background-color: #00000040;
+  color: #666666;
+  border: 2px solid #000000;
+  border-right-style: none;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
   transition: all 0.05s;
   filter: drop-shadow(0px 0px 0px #BBBAFF7F);
 }
