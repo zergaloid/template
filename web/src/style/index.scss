@@ -178,10 +178,12 @@ div#call {
         box-sizing: border-box;
         border-radius: 10px;
 
-        top: 50%;
-        /* Position Y halfway in */
-        left: 50%;
-        /* Position X halfway in */
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        
         transform: translate(-50%, -50%);
 
         filter: drop-shadow(4px 4px 6px #BBBAFF7F);

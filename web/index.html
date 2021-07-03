@@ -13,9 +13,8 @@
     <div id="side-bar">[]</div>
     <div id="message-bar">[]</div>
     <script>
-        root("#server-bar").dyn("/src/modules/Bar/Server", {});
-        root("#side-bar").dyn("/src/modules/Bar/Sidebar", {});
-        root("#message-bar").dyn("/src/modules/Bar/Sidebar", {});
+        dyn("/src/modules/Bar/Server", "#server-bar", {});
+        dyn("/src/modules/Bar/Sidebar", "#side-bar", {});
     </script>
 </body>
 
