@@ -12,7 +12,7 @@
         []
     </div>
     <script>
-            dyn('/src/modules/Call/Call', '#call', {
+            root("#call").dyn('/src/modules/Call/Call', {
                 selector: "room-cfd/callee",
                 wss: "wss://ws.srgl.cc:8000",
                 constraints:
