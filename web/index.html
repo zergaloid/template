@@ -11,9 +11,11 @@
 <body>
     <div id="server-bar">[]</div>
     <div id="side-bar">[]</div>
+    <div id="message-bar">[]</div>
     <script>
         root("#server-bar").dyn("/src/modules/Bar/Server", {});
         root("#side-bar").dyn("/src/modules/Bar/Sidebar", {});
+        root("#message-bar").dyn("/src/modules/Bar/Sidebar", {});
     </script>
 </body>
 

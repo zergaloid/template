@@ -1,0 +1,4 @@
+<div id="buttonsrow">
+    <input type="text" name="" id="message" placeholder="Enter a message for your friends to see">
+    <input type="button" name="" id="sender" label="send">
+</div>
