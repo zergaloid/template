@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <link rel="stylesheet" href="src/style/compcss/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://zergal.net/lib/index.js"></script>
@@ -13,8 +13,14 @@
     <div id="side-bar">[]</div>
     <div id="message-bar">[]</div>
     <script>
+<<<<<<< HEAD
         dyn("/src/modules/Bar/Server", "#server-bar", {});
         dyn("/src/modules/Bar/Sidebar", "#side-bar", {});
+=======
+        root("#server-bar").dyn("/src/modules/Bar/Server", {});
+        root("#side-bar").dyn("/src/modules/Bar/Sidebar", {});
+        root("#message-bar").dyn("/src/modules/Bar/Messager", {});
+>>>>>>> daa0f61950c66684417b00900d0cde7fcad66323
     </script>
 </body>
 
