@@ -25,13 +25,15 @@ div#server-bar {
     position: fixed;
     z-index: 2;
     display: inline-block;
+    
     height: 40px;
-    width: 100%;
+    width: 100vw;
     padding: 2.5px;
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 0px $dropshadow);
 
     button {
+        font-family: 'Ubuntu';
         width: 150px;
         height: 35px;
         background-color: #00000000;
@@ -67,13 +69,14 @@ div#side-bar {
     position: fixed;
     right: 0;
     top: 40px;
-    height: 100%;
+    height: 100vh;
     width: 40px;
     padding: 2.5px 0px 2.5px 2.5px;
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 0px $dropshadow);
 
     button {
+        font-family: 'Ubuntu';
         width: 40px;
         height: 40px;
         background-color: #00000000;
@@ -117,21 +120,27 @@ div#message-bar {
     flex: 0;
     position: fixed;
     z-index: 2;
-    display: inline-block;
+
     bottom: 0;
     height: 40px;
-    width: 100%;
+    width: 100vw;
     padding: 2.5px;
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 0px $dropshadow);
+    overflow: hidden;
 
-    input#message {
+    input[type=text] {
+        font-family: 'Ubuntu';
         margin: 0;
-        padding: 0;
-        width: 90vw;
+        padding-left: 10px;
+        width: 91vw;
         height: 35px;
         background-color: #00000000;
         filter: drop-shadow(4px 4px 2px $dropshadow);
+        box-sizing: border-box;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
 
         border: 2px solid #000000;
         box-sizing: border-box;
@@ -139,13 +148,25 @@ div#message-bar {
         transition: all 0.25s;
     }
 
-    input#sender {
+    input[type=text]:focus {
+        filter: drop-shadow(4px 4px 2px $dropshadow);
+        background-color: #00000020;
+        border: 2px solid #000000FF;
+        border-radius: 8px;
+        transition: all 0.25s;
+    }
+
+    input[type=submit] {
+        font-family: 'Ubuntu';
         margin: 0;
         padding: 0;
         width: 35px;
         height: 35px;
         background-color: #00000000;
         filter: drop-shadow(4px 4px 2px $dropshadow);
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
 
         border: 2px solid #000000;
         box-sizing: border-box;
@@ -153,7 +174,7 @@ div#message-bar {
         transition: all 0.25s;
     }
 
-    input#sender:hover {
+    input[type=submit]:hover {
         filter: drop-shadow(4px 4px 2px $dropshadow);
         background-color: #00000020;
         border: 2px solid #000000;
@@ -161,14 +182,13 @@ div#message-bar {
         transition: all 0.25s;
     }
 
-    input#sender:active {
-        background-color: #00000040;
-        color: #666666;
-        border: 2px solid #000000;
-        border-radius: 16px;
-        transition: all 0.05s;
-        filter: drop-shadow(0px 0px 0px $dropshadow);
-    }
+        input[type=submit]:active {
+            filter: drop-shadow(0px 0px 0px $dropshadow);
+            background-color: #00000040;
+            border: 2px solid #000000;
+            border-radius: 16px;
+            transition: all 0.05s;
+        }
 }
 
 div#call {
@@ -183,7 +203,7 @@ div#call {
         align-items: center;
         justify-content: center;
 
-        
+
         transform: translate(-50%, -50%);
 
         filter: drop-shadow(4px 4px 6px #BBBAFF7F);
