@@ -18,6 +18,7 @@ body {
 
 div {
     flex: 1;
+    transition: all 0.25s;
 }
 
 div#server-bar {
@@ -208,5 +209,46 @@ div#call {
 
         filter: drop-shadow(4px 4px 6px #BBBAFF7F);
     }
+}
 
+div#messagefield
+{
+    position: absolute;
+
+    margin: 0;
+    top: 40px;
+    width: 92vw;
+    height: 91.5vh;
+    padding: 2.5px;
+}
+div#message
+{
+    margin: 0;
+    padding: 2.5px;
+    background-color: #00000000;
+    filter: drop-shadow(4px 4px 2px $dropshadow);
+        
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: all 0.25s;
+
+    username {
+        font-weight: bold;
+    }
+    
+    time {
+        float: right;
+        font-weight: bold;
+    }
+
+    messagetext {
+        padding: 2.5em;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
 }

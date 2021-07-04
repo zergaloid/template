@@ -1,0 +1,5 @@
+<div id="message">[]</div>
+
+<script>
+    dyn("/Message", "#message", {});
+</script>
