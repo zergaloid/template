@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const fs = require('fs');
 const https = require('https');
-const ws = require('./methods/ws');
+const ws = require('./ws');
 
 const server = https.createServer({
     // self-signed Certificate
