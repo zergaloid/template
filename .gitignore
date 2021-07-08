@@ -1,3 +1,7 @@
 # Node
 *lock*
 node_modules
+
+# Compiled SCSS
+*.css
+*.css.map
