@@ -12,13 +12,13 @@
     <div id="server-bar">[]</div>
     <div id="side-bar">[]</div>
     <div id="message-bar">[]</div>
+    <div id="chat">[]</div>
 
     <script>
         dyn("/src/modules/Bar/Server", "#server-bar", {});
         dyn("/src/modules/Bar/Side", "#side-bar", {});
         dyn("/src/modules/Bar/Message", "#message-bar", {});
-        // dyn("/src/modules/Chat/MessageField", "#message-field", {});
-        // dyn("/src/modules/Chat/Message", "#message", {});
+        dyn("/src/modules/Chat/Messages", "#chat", {});
     </script>
 </body>
 

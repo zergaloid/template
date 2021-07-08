@@ -40,7 +40,7 @@ div button:active {
 }
 
 #server-bar button {
-  margin: 2.5px;
+  margin: 5px;
 }
 
 #side-bar {
@@ -64,7 +64,7 @@ div button:active {
   border-bottom-right-radius: 0;
 }
 
-div#message-bar {
+#message-bar {
   margin: 0;
   -webkit-box-flex: 0;
       -ms-flex: 0;
@@ -82,12 +82,14 @@ div#message-bar {
   display: flex;
 }
 
-div#message-bar input {
+#message-bar input {
+  height: 35px;
   background-color: #00000000;
   border: 2px solid #000000;
+  margin-left: 5px;
 }
 
-div#message-bar input[type="text"] {
+#message-bar input[type="text"] {
   font-family: "Ubuntu";
   margin: 0;
   -webkit-box-flex: 1;
@@ -102,80 +104,65 @@ div#message-bar input[type="text"] {
   transition: all 0.25s;
 }
 
-div#message-bar input[type="text"]:focus {
+#message-bar input[type="text"]:focus {
   background-color: #00000020;
   border-radius: 6px;
 }
 
-div#message-bar input[type="submit"] {
-  width: 4%;
-  height: 35px;
+#message-bar input[type="submit"] {
   vertical-align: middle;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
 }
 
-div#message-bar input[type="submit"]:hover {
-  -webkit-filter: drop-shadow(4px 4px 2px #bbbaff7f);
-          filter: drop-shadow(4px 4px 2px #bbbaff7f);
+#message-bar input[type="submit"]:hover {
   border-radius: 8px;
 }
 
-div#message-bar input[type="submit"]:active {
-  -webkit-filter: drop-shadow(0px 0px 0px #bbbaff7f);
-          filter: drop-shadow(0px 0px 0px #bbbaff7f);
+#message-bar input[type="submit"]:active {
   background-color: #00000040;
   border: 2px solid #000000;
 }
 
-div#messagefield {
-  position: absolute;
-  margin: 0;
-  top: 40px;
-  width: 92vw;
-  height: 91.5vh;
-  padding: 2.5px;
-}
-
-div#message {
-  margin: 0;
-  padding: 2.5px;
+.message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #00000000;
-  -webkit-filter: drop-shadow(4px 4px 2px #bbbaff7f);
-          filter: drop-shadow(4px 4px 2px #bbbaff7f);
-  vertical-align: middle;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 97%;
+  margin: 5px;
+  margin-top: 2.5px;
   border: 2px solid #000000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
 }
 
-div#message username {
+.message p {
   font-weight: bold;
 }
 
-div#message time {
+.message .message-meta {
+  font-size: small;
   float: right;
-  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-div#message messagetext {
-  padding: 2.5em;
+.message .message-content {
+  padding: 5px;
   word-break: break-all;
   word-wrap: break-word;
 }
