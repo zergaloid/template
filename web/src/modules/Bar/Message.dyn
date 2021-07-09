@@ -1,2 +1,2 @@
-<input type="text" name="" id="message" placeholder="Enter a message for your friends to see"/>
-<input type="submit" name="" id="message" value="send"/>
+<input type="text" placeholder="Enter a message for your friends to see"/>
+<input type="submit" value="Send"/>
