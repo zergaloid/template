@@ -1,3 +1,19 @@
-<button>General</button>
-<button>Retardation HQ</button>
-<button>Furry</button>
+<div class="channels">
+    <button>General</button>
+    <button>Retardation HQ</button>
+    <button>Furry</button>
+</div>
+<div id="profile">
+    <img class="Avatar" src="" alt="" srcset=""> <!--Avatar-->
+    <span class="profile-meta">
+        <p class="profile-username">Zergal</p>
+        <p class="profile-status">DO NOT DISTURB</p>
+    </span>
+    <span class="options">
+        <img src="" alt="" srcset="" id="settings">
+        <img src="" alt="" srcset="" id="mute">
+        <img src="" alt="" srcset="" id="deaf">
+    </span>
+
+
+</div>

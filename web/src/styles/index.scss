@@ -66,12 +66,32 @@ div {
 
     *
     {
-        width: 5vw;
+        width: 9vw;
 
         margin: 2.5px 0px 2.5px 2.5px;
         border-right: none;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+    }
+
+    #profile {
+        float: right;
+        position: absolute;
+        background-color: darken($primary-color, 10);
+        filter: drop-shadow(0px 0px 1px $secondary-color);
+        margin: 2.5px 0px 2.5px 2.5px;
+        height: 18vh;
+        bottom: 110px;
+
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        p.profile-username {
+            text-align: center;
+        }
     }
 }
 
@@ -123,8 +143,7 @@ div {
     }
 }
 
-#chat
-{
+#chat{
     margin-top: 10px;
 }
 
