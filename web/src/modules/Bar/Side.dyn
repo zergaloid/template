@@ -10,9 +10,9 @@
         <p class="profile-status">DO NOT DISTURB</p>
     </span>
     <span class="options">
-        <img src="" alt="" srcset="" id="settings">
-        <img src="" alt="" srcset="" id="mute">
-        <img src="" alt="" srcset="" id="deaf">
+        <button class="material-icons-round">settings</button>
+        <button class="material-icons-round">mic</button>
+        <button class="material-icons-round">menu</button>
     </span>
 
 
