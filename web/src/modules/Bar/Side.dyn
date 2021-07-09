@@ -4,7 +4,7 @@
     <button>Furry</button>
 </div>
 <div id="profile">
-    <img class="Avatar" src="" alt="" srcset=""> <!--Avatar-->
+    <img class="Avatar" src="/img/86125378.png" alt="" srcset=""> <!--Avatar-->
     <span class="profile-meta">
         <p class="profile-username">Zergal</p>
         <p class="profile-status">DO NOT DISTURB</p>
