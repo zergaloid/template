@@ -3,17 +3,11 @@
     <button>Retardation HQ</button>
     <button>Furry</button>
 </div>
-<div id="profile">
-    <img class="Avatar" src="/img/86125378.png" alt="" srcset=""> <!--Avatar-->
-    <span class="profile-meta">
-        <p class="profile-username">Zergal</p>
-        <p class="profile-status">DO NOT DISTURB</p>
+<div class="profile">
+    <span id="meta">
+        <p id="username">Zergal</p>
     </span>
-    <span class="options">
-        <button class="material-icons-round">settings</button>
-        <button class="material-icons-round">mic</button>
-        <button class="material-icons-round">menu</button>
-    </span>
-
-
+    <img id="avatar" src="/img/86125378.png" alt="" srcset="">
+    <p>Settings</p>
+    <p>ToS</p>
 </div>

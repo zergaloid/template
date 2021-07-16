@@ -59,7 +59,7 @@ div {
 }
 
 #side-bar {
-    margin-top: 10px;
+    margin-top: 5px;
     position: fixed;
     right: 0;
     height: 100%;
@@ -77,7 +77,7 @@ div {
         border-bottom-right-radius: 0;
     }
 
-    #profile {
+    .profile {
         float: right;
         position: absolute;
         background-color: darken($primary-color, 10);
@@ -93,15 +93,11 @@ div {
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
 
-        p.profile-username {
+        #username {
             text-align: center;
-        }
-        p.profile-status {
-            text-align: center;
-            font-size: small;
         }
 
-        img.Avatar {
+        #avatar {
             margin-top: 10px;
             margin-bottom: 5px;
             border-radius: 50%;

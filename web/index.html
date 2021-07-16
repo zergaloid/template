@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/styles/compcss/index.css">
+    <link rel="stylesheet" href="src/styles/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://zergal.net/lib/index.js"></script>
 </head>
@@ -11,15 +11,15 @@
 <body>
     <div id="server-bar">[]</div>
     <div id="side-bar">[]</div>
-
     <div id="chat">[]</div>
-    
     <div id="message-bar">[]</div>
     <script>
-        dyn("/src/modules/Bar/Server", "#server-bar", {});
-        dyn("/src/modules/Bar/Side", "#side-bar", {});
-        dyn("/src/modules/Bar/Message", "#message-bar", {});
-        dyn("/src/modules/Chat/Messages", "#chat", {});
+        const fetchFrom = window.location.hostname != "localhost" ? "https://zergal.net/syncia" : ''
+
+        dyn(`${fetchFrom}/src/modules/Bar/Server`, "#server-bar", {});
+        dyn(`${fetchFrom}/src/modules/Bar/Side`, "#side-bar", {});
+        dyn(`${fetchFrom}/src/modules/Bar/Message`, "#message-bar", {});
+        dyn(`${fetchFrom}/src/modules/Chat/Messages`, "#chat", {});
     </script>
 </body>
 
