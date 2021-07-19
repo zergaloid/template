@@ -1,0 +1,8 @@
+<div class="profile">
+    <span id="meta">
+        <p id="username">Zergal</p>
+    </span>
+    <img id="avatar" src="/img/86125378.png" alt="" srcset="">
+    <button>Settings</button>
+    <button>ToS</button>
+</div>

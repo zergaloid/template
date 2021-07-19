@@ -11,6 +11,7 @@
 <body>
     <div id="server-bar">[]</div>
     <div id="side-bar">[]</div>
+    <div id="profile">[]</div>
     <div id="chat">[]</div>
     <div id="message-bar">[]</div>
     <script>
@@ -18,6 +19,7 @@
 
         dyn(`${fetchFrom}/src/modules/Bar/Server`, "#server-bar", {});
         dyn(`${fetchFrom}/src/modules/Bar/Side`, "#side-bar", {});
+        dyn(`${fetchFrom}/src/modules/Bar/Profile`, "#profile", {});
         dyn(`${fetchFrom}/src/modules/Bar/Message`, "#message-bar", {});
         dyn(`${fetchFrom}/src/modules/Chat/Messages`, "#chat", {});
     </script>

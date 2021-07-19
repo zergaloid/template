@@ -1,13 +1,16 @@
+<div class="category">
+    <button>BASIC CHANNELS</button>
+</div>
 <div class="channels">
     <button>General</button>
-    <button>Retardation HQ</button>
-    <button>Furry</button>
+    <button>Media</button>
+    <button>Eternal Memes</button>
 </div>
-<div class="profile">
-    <span id="meta">
-        <p id="username">Zergal</p>
-    </span>
-    <img id="avatar" src="/img/86125378.png" alt="" srcset="">
-    <p>Settings</p>
-    <p>ToS</p>
+<div class="category">
+    <button>SOME CHANNELS</button>
+</div>
+<div class="channels">
+    <button>Furry McFlurry</button>
+    <button>Retardation HQ</button>
+    <button>Naughty Furry Abyss</button>
 </div>
