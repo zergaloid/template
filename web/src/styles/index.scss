@@ -6,19 +6,12 @@ $secondary-color: #303030;
 
 /* Browser-Kit / Scrollbar etc. etc. */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: darken($primary-color, 5);
     border-radius: 5px;
-    border: 1px darken($primary-color, 10) solid;
-    filter: drop-shadow(0px 0px 1px $secondary-color);
-    transition: all 0.25s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: darken($primary-color, 10);
     filter: drop-shadow(0px 0px 1px $secondary-color);
     transition: all 0.25s;
 }
@@ -215,7 +208,7 @@ div {
 #chat {
     top: 45px;
     bottom: 25px;
-    right: 165px;
+    right: 167.5px;
 
     position: fixed;
     overflow: scroll;
