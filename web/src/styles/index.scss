@@ -9,6 +9,14 @@ $secondary-color: #303030;
     width: 2px;
 }
 
+#side-bar::-webkit-scrollbar {
+    display: none;
+}
+
+#server-bar::-webkit-scrollbar {
+    display: none;
+}
+
 ::-webkit-scrollbar-thumb {
     background-color: darken($primary-color, 5);
     border-radius: 5px;
@@ -69,21 +77,34 @@ div {
     width: 100vw;
     background-color: darken($primary-color, 5);
     filter: drop-shadow(0px 0px 1px $secondary-color);
-
+    padding-left: 2.5px;
     position: fixed;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
     button {
-        margin: 5px;
+        margin-top: 5px;
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+        width: 35px;
     }
 }
 
 #side-bar {
     top: 50px;
+    bottom: 240px;
     position: fixed;
+    overflow: scroll;
     right: 0;
-    height: 100%;
     display: flex;
     flex-direction: column;
+
+    overflow-x: hidden;
 
     .category {
 
@@ -179,6 +200,7 @@ div {
         background-color: darken($primary-color, 5);
         filter: drop-shadow(0px 0px 1px $secondary-color);
         vertical-align: middle;
+        font-family: "Ubuntu", sans-serif;
 
         border: none;
     }
