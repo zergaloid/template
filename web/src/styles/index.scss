@@ -4,8 +4,33 @@
 $primary-color: #7e7e7e;
 $secondary-color: #303030;
 
+/* Browser-Kit / Scrollbar etc. etc. */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: darken($primary-color, 5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darken($primary-color, 10);
+    border-radius: 5px;
+    border: 1px darken($primary-color, 15) solid;
+    filter: drop-shadow(0px 0px 1px $secondary-color);
+    transition: all 0.25s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: darken($primary-color, 15);
+    filter: drop-shadow(0px 0px 1px $secondary-color);
+    transition: all 0.25s;
+}
+
+/* Syncia - Alpha Style*/
 html {
     font-family: "Ubuntu", sans-serif;
+    scroll-behavior: smooth;
     transition: all 0.25s;
 }
 
@@ -20,6 +45,8 @@ body {
 
 div {
     transition: all 0.25s;
+    margin: 0;
+
     button {
         font-family: "Ubuntu";
         width: 150px;
@@ -33,7 +60,8 @@ div {
         transition: all 0.25s;
     }
 
-    button:hover, button:active {
+    button:hover,
+    button:active {
         background-color: darken($primary-color, 15);
         filter: drop-shadow(0px 0px 1px $secondary-color);
         border-radius: 4px*2;
@@ -47,12 +75,13 @@ div {
     }
 }
 
-#server-bar
-{
+#server-bar {
     height: 45px;
     width: 100vw;
     background-color: darken($primary-color, 5);
     filter: drop-shadow(0px 0px 1px $secondary-color);
+
+    position: fixed;
 
     button {
         margin: 5px;
@@ -60,7 +89,7 @@ div {
 }
 
 #side-bar {
-    margin-top: 5px;
+    top: 50px;
     position: fixed;
     right: 0;
     height: 100%;
@@ -68,7 +97,8 @@ div {
     display: flex;
     flex-direction: column;
 
-    .category{
+    .category {
+
         button,
         button:hover,
         button:active {
@@ -79,8 +109,7 @@ div {
         }
     }
 
-    *
-    {
+    * {
         width: 160px;
 
         margin: 2.5px 0px 2.5px 2.5px;
@@ -92,6 +121,7 @@ div {
 
 #profile {
     width: 160px;
+    bottom: 50px;
     float: right;
     position: fixed;
     right: 0;
@@ -99,7 +129,6 @@ div {
     filter: drop-shadow(0px 0px 1px $secondary-color);
     margin: 2.5px 0px 2.5px 2.5px;
     height: 200px;
-    bottom: 50px;
     text-align: center;
 
     border-right: none;
@@ -152,8 +181,7 @@ div {
 
     display: flex;
 
-    input
-    {
+    input {
         height: 100%;
         color: white;
         padding-left: 10px;
@@ -170,13 +198,13 @@ div {
         transition: all 0.25s;
     }
 
-    input[type="text"]:focus, input[type="submit"]:hover {
+    input[type="text"]:focus,
+    input[type="submit"]:hover {
         background-color: darken($primary-color, 10);
         filter: drop-shadow(0px 0px 1px $secondary-color);
     }
 
-    input[type="submit"]
-    {
+    input[type="submit"] {
         padding: 5px;
     }
 
@@ -186,46 +214,47 @@ div {
     }
 }
 
-#chat{
-    margin-top: 10px;
-}
+#chat {
+    top: 50px;
+    bottom: 50px;
 
-.message {
-    display: flex;
+    position: absolute;
 
-    
-    background-color: darken($primary-color, 5);
-    filter: drop-shadow(0px 0px 1px $secondary-color);
-
-    justify-content: center;
-    align-items: center;
-
-
-
-    margin-top: 2.5px;
-    margin-right: 170px;
-
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-
-    p {
-        margin: 1px;
-        padding: 5px;
-        font-weight: bold;
-    }
-
-    .message-meta {
-        font-size: small;
-        float: right;
+    .message {
         display: flex;
-        flex-direction: column;
-    }
 
-    .message-content {
-        width: 97%;
-        flex: 1;
-        padding: 5px;
-        word-break: break-all;
-        word-wrap: break-word;
+        background-color: darken($primary-color, 5);
+        filter: drop-shadow(0px 0px 1px $secondary-color);
+
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 2.5px;
+        margin-bottom: 2.5px;
+        margin-right: 170px;
+
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        p {
+            margin: 1px;
+            padding: 5px;
+        }
+
+        .message-meta {
+            font-size: small;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+        }
+
+        .message-content {
+            width: 97%;
+            flex: 1;
+            padding: 5px;
+
+            word-wrap: normal;
+        }
     }
 }
