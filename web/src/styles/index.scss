@@ -9,20 +9,16 @@ $secondary-color: #303030;
     width: 10px;
 }
 
-::-webkit-scrollbar-track {
-    background: darken($primary-color, 5);
-}
-
 ::-webkit-scrollbar-thumb {
-    background-color: darken($primary-color, 10);
+    background-color: darken($primary-color, 5);
     border-radius: 5px;
-    border: 1px darken($primary-color, 15) solid;
+    border: 1px darken($primary-color, 10) solid;
     filter: drop-shadow(0px 0px 1px $secondary-color);
     transition: all 0.25s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($primary-color, 15);
+    background-color: darken($primary-color, 10);
     filter: drop-shadow(0px 0px 1px $secondary-color);
     transition: all 0.25s;
 }
@@ -93,7 +89,6 @@ div {
     position: fixed;
     right: 0;
     height: 100%;
-
     display: flex;
     flex-direction: column;
 
@@ -120,7 +115,7 @@ div {
 }
 
 #profile {
-    width: 160px;
+    width: 158px;
     bottom: 50px;
     float: right;
     position: fixed;
@@ -130,6 +125,9 @@ div {
     margin: 2.5px 0px 2.5px 2.5px;
     height: 200px;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
 
     border-right: none;
     border-top-right-radius: 0;
@@ -215,10 +213,12 @@ div {
 }
 
 #chat {
-    top: 50px;
-    bottom: 50px;
+    top: 45px;
+    bottom: 25px;
+    right: 165px;
 
-    position: absolute;
+    position: fixed;
+    overflow: scroll;
 
     .message {
         display: flex;
@@ -228,10 +228,9 @@ div {
 
         justify-content: center;
         align-items: center;
-
-        margin-top: 2.5px;
-        margin-bottom: 2.5px;
-        margin-right: 170px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
 
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
