@@ -95,7 +95,8 @@ div {
     }
 }
 
-#side-bar {
+#side-bar,
+#sett-categories {
     top: 50px;
     bottom: 240px;
     position: fixed;
@@ -126,6 +127,10 @@ div {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
+}
+
+sett-categories {
+    bottom: 10px;
 }
 
 #profile {
@@ -270,5 +275,31 @@ div {
 
             word-wrap: normal;
         }
+    }
+}
+
+#sett-cont {
+    top: 45px;
+    bottom: 0px;
+    right: 167.5px;
+    left: 0px;
+
+    position: fixed;
+    display: flex;
+    overflow: scroll;
+
+    background-color: darken($primary-color, 5);
+    filter: drop-shadow(0px 0px 1px $secondary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    .container {
+        margin-left: 10px;
+        margin-top: -10px;
+        margin-bottom: -10px;
+        margin-right: 10px;
     }
 }

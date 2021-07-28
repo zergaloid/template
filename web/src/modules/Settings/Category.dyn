@@ -1,0 +1,19 @@
+<div class="category">
+    <button>USERSETTINGS</button>
+</div>
+<div class="channels">
+    <button>My Account</button>
+    <button>Secruity</button>
+    <button>IDK</button>
+</div>
+<div class="category">
+    <button>APPSETTINGS</button>
+</div>
+<div class="channels">
+    <button>Appearance</button>
+    <button>Text & Pictures/button>
+    <button>Voice- & Videochat</button>
+    <button>Notifications</button>
+    <button>Language</button>
+    <button>Advanced</button>
+</div>
