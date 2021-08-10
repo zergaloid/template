@@ -9,28 +9,27 @@
 </head>
 
 <body>
-    <!-- Mainarea -->
-    <!-- <div id="chat">[]</div> -->
-    <div id="server-bar">[]</div>
-    <!-- <div id="side-bar">[]</div> -->
+
+    <div id="core-box">[]
+        <div id="bottom-box">[]</div>
+    </div>
+    <div id="top-box">[]</div>
+    <div id="side-box">[]</div>
+
     <div id="profile">[]</div>
-    <!-- <div id="message-bar">[]</div> -->
 
-    <!-- Settings -->
-    <div id="sett-categories">[]</div>
-    <div id="sett-cont">[]</div>
     <script>
-        const fetchFrom = window.location.hostname != "localhost" ? "https://zergal.net/syncia" : ''
+        const fetchFrom = window.location.hostname != "localhost" ? "https://syncia.net/dyn" : ''
 
-        dyn(`${fetchFrom}/src/modules/Bar/Server`, "#server-bar", {});
-        // dyn(`${fetchFrom}/src/modules/Bar/Side`, "#side-bar", {});
+        dyn(`${fetchFrom}/src/modules/Bar/Server`, "#top-box", {});
+        dyn(`${fetchFrom}/src/modules/Bar/Side`, "#side-box", {});
         dyn(`${fetchFrom}/src/modules/Bar/Profile`, "#profile", {});
-        // dyn(`${fetchFrom}/src/modules/Bar/Message`, "#message-bar", {});
-        // dyn(`${fetchFrom}/src/modules/Chat/Messages`, "#chat", {});
+        dyn(`${fetchFrom}/src/modules/Bar/Input`, "#bottom-box", {});
+        dyn(`${fetchFrom}/src/modules/Chat/Messages`, "#core-box", {});
 
         // Settings
-        dyn(`${fetchFrom}/src/modules/Settings/Category`, "#sett-categories", {});
-        dyn(`${fetchFrom}/src/modules/Settings/SettingsCont`, "#sett-cont", {});
+        dyn(`${fetchFrom}/src/modules/Settings/Categories`, "#side-box", {});
+        // dyn(`${fetchFrom}/src/modules/Settings/Options`, "#core-box", {});
     </script>
 </body>
 

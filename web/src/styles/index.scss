@@ -1,19 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-$primary-color: #7e7e7e;
-$secondary-color: #303030;
+$primary-color: lighten(#7e7e7e, 20);
+$secondary-color: lighten(#303030, 20);
 
-/* Browser-Kit / Scrollbar etc. etc. */
+/* Browser-Kit / Scrollbar etc. */
 ::-webkit-scrollbar {
     width: 2px;
 }
 
-#side-bar::-webkit-scrollbar {
-    display: none;
-}
-
-#server-bar::-webkit-scrollbar {
+#top-box::-webkit-scrollbar,
+#side-box::-webkit-scrollbar {
     display: none;
 }
 
@@ -61,7 +58,7 @@ div {
     button:active {
         background-color: darken($primary-color, 15);
         filter: drop-shadow(0px 0px 1px $secondary-color);
-        border-radius: 4px*2;
+        border-radius: 4px * 2;
     }
 
     button:active {
@@ -72,31 +69,28 @@ div {
     }
 }
 
-#server-bar {
+#top-box {
     height: 45px;
     width: 100vw;
-    background-color: darken($primary-color, 5);
-    filter: drop-shadow(0px 0px 1px $secondary-color);
+
     padding-left: 2.5px;
     position: fixed;
-    overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
+    background-color: darken($primary-color, 5);
+    filter: drop-shadow(0px 0px 1px $secondary-color);
 
     button {
         margin-top: 5px;
         margin-left: 2.5px;
         margin-right: 2.5px;
         width: 35px;
+
+        padding: 0px;
     }
 }
 
-#side-bar,
-#sett-categories {
+#side-box {
     top: 50px;
     bottom: 240px;
     position: fixed;
@@ -108,7 +102,6 @@ div {
     overflow-x: hidden;
 
     .category {
-
         button,
         button:hover,
         button:active {
@@ -127,10 +120,6 @@ div {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
-}
-
-sett-categories {
-    bottom: 10px;
 }
 
 #profile {
@@ -184,10 +173,21 @@ sett-categories {
     }
 }
 
-#message-bar {
+#side-box,
+#top-box,
+#profile {
+    @media (max-width: 500px), (max-height: 500px) {
+        display: none;
+    }
+}
+
+#bottom-box {
+    @media (min-width: 500px) {
+        position: fixed;
+    }
+
     margin: 0;
-    flex: 0;
-    position: fixed;
+    flex: 1;
     z-index: 2;
     bottom: 0;
     height: 40px;
@@ -232,28 +232,38 @@ sett-categories {
     }
 }
 
-#chat {
-    top: 45px;
-    bottom: 25px;
-    right: 167.5px;
+#core-box {
+    @media (min-width: 500px) {
+        position: fixed;
+        top: 45px;
+        bottom: 25px;
+        right: 167.5px;
+        .message {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
 
-    position: fixed;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+
+
+    display: flex;
+    flex-direction: column;
+
     overflow: scroll;
 
     .message {
         display: flex;
+
+        flex: 1;
 
         background-color: darken($primary-color, 5);
         filter: drop-shadow(0px 0px 1px $secondary-color);
 
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
 
         p {
             margin: 1px;
@@ -275,31 +285,5 @@ sett-categories {
 
             word-wrap: normal;
         }
-    }
-}
-
-#sett-cont {
-    top: 45px;
-    bottom: 0px;
-    right: 167.5px;
-    left: 0px;
-
-    position: fixed;
-    display: flex;
-    overflow: scroll;
-
-    background-color: darken($primary-color, 5);
-    filter: drop-shadow(0px 0px 1px $secondary-color);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-
-    .container {
-        margin-left: 10px;
-        margin-top: -10px;
-        margin-bottom: -10px;
-        margin-right: 10px;
     }
 }
