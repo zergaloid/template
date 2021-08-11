@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$primary-color: lighten(#7e7e7e, 20);
+$secondary-color: lighten(#303030, 20);
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+#top-box::-webkit-scrollbar,
+#side-box::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darken($primary-color, 5);
+    border-radius: 5px;
+    filter: drop-shadow(0px 0px 1px $secondary-color);
+    transition: all 0.25s;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+    transition: all 0.25s;
+    display: flex;
+    font-family: Ubuntu;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    filter: drop-shadow(0px 0px 10px $secondary-color);
+    width: 100vw;
+
+    header,
+    footer {
+        width: 100vw;
+    }
+
+    header {
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: $primary-color;
+        text-align: center;
+        color: white;
+    }
+
+    footer {
+        position: absolute;
+        background-color: $secondary-color;
+        left: 0;
+        bottom: 0;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+    }
+}
