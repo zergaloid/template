@@ -13,67 +13,106 @@ html {
     font-family: Ubuntu;
 }
 
+button {
+    font-family: "Ubuntu";
+    width: 150px;
+    height: 35px;
+    background-color: darken($primary-color, 0);
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+    transition: all 0.25s;
+}
+
+button:hover,
+button:active {
+    background-color: darken($primary-color, 5);
+    border-radius: 4px * 2;
+}
+
+button:active {
+    color: darken(white, 15);
+    background-color: darken($primary-color, 10);
+    border-radius: 4px * 3;
+    transition: all (0.25s/10);
+}
+
 body {
     margin: 0;
     padding: 0;
 
     height: 100vh;
-    
+
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 
     width: 100vw;
 
-    filter: drop-shadow(0px 0px 10px $secondary-color);
-
     header,
     footer {
-        width: 100vw;
+        margin: 0;
+        padding: 0;
         text-align: center;
+        filter: drop-shadow(0px 0px 10px $secondary-color);
+        z-index: 100;
     }
 
     header {
         background-color: $primary-color;
         color: white;
+        font-size: xx-large;
+        font-weight: 900;
     }
 
     footer {
-        margin-top:auto;
+        margin-top: auto;
 
         color: white;
-        font-weight: 500;
+        font-weight: 200;
 
         div {
-            background-color: $secondary-color;
-            padding: 5px;
+            padding: 10px;
+        }
 
-            #copyright {
-                font-weight: 900;
-            }
+        div#copyright {
+            font-weight: 700;
+            background-color: lighten($secondary-color, 10);
+        }
 
-            #impressum {
-                background-color: lighten($secondary-color, 20);
-            }
+        div#impressum {
+            background-color: lighten($secondary-color, 20);
         }
     }
 
     content {
-    div {
-            #operate {
-                background-color: lighten($secondary-color, 20);
-            }
-            #simple {
-                background-color: lighten($secondary-color, 0);
-            }
-            #modular {
-                background-color: lighten($secondary-color, 20);
-            }
-            #composable {
-                background-color: lighten($secondary-color, 0);
-            }
-            #additional {
-                background-color: lighten($secondary-color, 20);
-            }
+        text-align: center;
+        background-color: lighten($secondary-color, 60);
+
+        div#operate {
+            z-index: 20;
+            filter: drop-shadow(0px 0px 10px $secondary-color);
+        }
+
+        div#operate,
+        div#modular,
+        div#additional {
+            z-index: 10;
+            background-color: lighten($secondary-color, 60);
+
+            padding: 10px;
+        }
+
+        div#simple,
+        div#composable {
+            z-index: 20;
+            background-color: lighten($secondary-color, 50);
+            filter: drop-shadow(0px 0px 10px $secondary-color);
+            padding: 10px;
+        }
+
+        div#modular {
+            z-index: 8;
         }
     }
 

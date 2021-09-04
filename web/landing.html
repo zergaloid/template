@@ -14,18 +14,47 @@
     </header>
     <content>
         <div id="operate">
+            <h2>ARE YOU READY?</h2>
+            <button type="submit">Log In</button>
+            <button type="submit">Sign In</button>
+            <br>
+            <br>
             <!--The SignIn / LogIn stuff will be shown here, maybe even a download once?-->
         </div>
         <div id="simple">
+            <h2>SIMPLE</h2>
+            <p>It is simple, because it is simple</p>
+            <p>It is simple, because it is simple</p>
+            <p>It is simple, because it is simple</p>
+
 	        <!--Explanation of why Syncia is Simple-->
         </div>
         <div id="modular">
+            <h2>MODULAR</h2>
+            <p>It is modular, because it is modular</p>
+            <p>It is modular, because it is modular</p>
+            <p>It is modular, because it is modular</p>
             <!--Explanation of why Syncia is Modular-->
         </div>
         <div id="composable">
+            <h2>COMPOSABLE</h2>
+            <p>It is composable, because it is composable</p>
+            <p>It is composable, because it is composable</p>
+            <p>It is composable, because it is composable</p>
             <!--Explanation of why Syncia is Composable-->
         </div>
         <div id="additional">
+            <h2>ADDITIONAL</h2>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
+            <p>I am additional stuff</p>
             <!--Add more-->
         </div>
     </content>
@@ -42,14 +71,5 @@
             </p>
         </div>
     </footer>
-    <script>
-        const fetchFrom = window.location.hostname != "localhost" ? "https://syncia.net/dyn" : ''
-
-        dyn(`${fetchFrom}/src/modules/Landing/operate`, "#operate", {});
-        dyn(`${fetchFrom}/src/modules/Landing/simpleexp`, "#simple", {});
-        dyn(`${fetchFrom}/src/modules/Landing/modularexp`, "#modular", {});
-        dyn(`${fetchFrom}/src/modules/Landing/composable`, "#composable", {});
-        dyn(`${fetchFrom}/src/modules/Landing/additional`, "#additional", {});
-    </script>
 </body>
 </html>
