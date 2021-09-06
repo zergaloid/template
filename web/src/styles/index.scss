@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-$primary-color: lighten(#7e7e7e, 20);
-$secondary-color: lighten(#303030, 20);
-
+@import 'syncia-colourlib.scss';
 /* Browser-Kit / Scrollbar etc. */
 ::-webkit-scrollbar {
     width: 2px;
