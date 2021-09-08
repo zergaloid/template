@@ -2,9 +2,5 @@
 *lock*
 node_modules
 
-# Compiled SCSS
-*.css
-*.css.map
-
-# WebRTC testing
-test
+# Compiled content
+public
