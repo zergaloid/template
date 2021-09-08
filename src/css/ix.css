@@ -43,10 +43,25 @@ button:hover
     border-radius: 7px;
 }
 
-#thisis
+.message
+{
+    display: flex;
+    vertical-align: middle;
+    #author
+    {
+        font-size: 1.2em;
+    }
+}
+
+#this-is
 {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    *
+    {
+        padding: 1em;
+    }
 }
