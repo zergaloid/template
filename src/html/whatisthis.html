@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,73 @@
     <script src="./js/app.js"></script>
     <link rel="stylesheet" href="./css/ix.css">
 </head>
+
 <body>
     @import "./includes/header.html"
     <div id="this-is">
         <div class="message">
-            <p id="author">A</p>
+            <span id="meta">
+                <p id="author">A</p>
+                <span id="breaker"></span>
+                <p id="date">02-10-21 19:30</p>
+            </span>
             <p id="content">This is a closed beta for an innovative chat app!</p>
-            <p id="date"></p>
         </div>
         <div class="message">
-            <p id="author">B</p>
+            <span id="meta">
+                <p id="author">B</p>
+                <span id="breaker"></span>
+                <p id="date">02-10-21 19:31</p>
+            </span>
             <p id="content">What's sooooo "innovative" about it?</p>
-            <p id="date"></p>
+        </div>
+        <div class="message">
+            <span id="meta">
+                <p id="author">A</p>
+                <span id="breaker"></span>
+                <p id="date">02-10-21 19:33</p>
+            </span>
+            <p id="content">
+            <pre>Well... It can work anywhere! Literally anywhere
+Online and offline. On a plane and underwater - anywhere
+            </pre>
+            </p>
+        </div>
+        <div class="message">
+            <span id="meta">
+                <p id="author">B</p>
+                <span id="breaker"></span>
+                <p id="date">02-10-21 19:34</p>
+            </span>
+            <p id="content">
+            <pre>How?!
+            </pre>
+            </p>
+        </div>
+        <div class="message">
+            <span id="meta">
+                <p id="author">A</p>
+                <span id="breaker"></span>
+                <p id="date">02-10-21 19:34</p>
+            </span>
+            <p id="content">
+            <pre>Try it and see for yourself!
+            </pre>
+            </p>
+        </div>
+        <div class="message">
+            <span id="meta">
+                <p id="author">You</p>
+                <span id="breaker"></span>
+                <p id="date">JO-IN-THE BE:TA</p>
+            </span>
+            <p id="content">
+                <form id="try-it" method="post" action="https://functions.yandexcloud.net/d4edsioq0odbmd9blij6">
+                    <input placeholder="e-mail"></input>
+                </form>
+            </p>
         </div>
     </div>
 </body>
+
 </html>
