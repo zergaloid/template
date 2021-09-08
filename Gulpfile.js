@@ -26,6 +26,12 @@ function css() {
 }
 
 function html() {
+  const webp = require('gulp-webp')
+
+  gulp.src('src/img/*.png')
+  .pipe(webp())
+  .pipe(gulp.dest('public/img/'))
+
   return gulp.src(sources.html[0])
     .pipe(gulp.dest(output));
 }

@@ -1,0 +1,65 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root
+{
+    --color-primary: #65655e;
+    --color-secondary: white;
+    --color-nouaveu-blurple: #7D80DA;
+    --color-lemonade: #F7CB15;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a
+{
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+button
+{
+    transition: border-radius 0.1s ease, box-shadow 0.1s linear;
+
+    background-color: var(--color-secondary);
+    border: none;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    cursor: pointer;
+
+    border-radius: 3px;
+}
+
+button:hover
+{
+    box-shadow: 0 3px 10px var(--color-nouaveu-blurple);
+    border-radius: 7px;
+}
+
+header
+{
+    display: flex;
+    color: var(--color-secondary);
+    padding: 1em;
+    background-color: var(--color-primary);
+    img
+    {
+        width: 2.5vw;
+    }
+    #breaker
+    {
+        flex-grow: 1;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+    div
+    {
+        *
+        {
+            margin-right: 1vh;
+        }
+    }
+}
