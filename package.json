@@ -4,11 +4,14 @@
     "web": "gulp"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.4",
     "browserify": "^17.0.0",
     "globby": "10.0.1",
     "gulp": "^4.0.2",
     "gulp-coffee": "^3.0.3",
+    "gulp-postcss": "^9.0.1",
     "gulp-uglify": "^3.0.2",
+    "postcss-nested": "^5.0.6",
     "through2": "^4.0.2",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
