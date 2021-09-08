@@ -54,6 +54,7 @@ input {
   box-shadow: -3px -3px 2px var(--color-lemonade);
   border-bottom: solid 2px var(--color-nouaveu-blurple);
   border-right: solid 3px var(--color-nouaveu-blurple);
+  max-width: 85%;
 }
 
 
@@ -73,7 +74,7 @@ input:focus {
   border-radius: 0.5em;
   margin-bottom: 0.5em;
   box-shadow: -3px -3px 0 var(--color-primary);
-  min-width: 40vw;
+  width: 50vw;
 
   #meta {
     align-items: center;

@@ -6,7 +6,8 @@ header
     background-color: var(--color-primary);
     img
     {
-        width: 2.5vw;
+        width: 40px;
+        height: auto;
     }
     #breaker
     {
