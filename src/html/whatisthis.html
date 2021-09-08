@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/app.js"></script>
     <link rel="stylesheet" href="./css/ix.css">
 </head>
 
@@ -70,12 +69,15 @@
                 <p id="date">JO-IN-THE BE:TA</p>
             </span>
             <p id="content">
-                <form id="try-it" method="post" action="https://functions.yandexcloud.net/d4edsioq0odbmd9blij6">
-                    <input placeholder="e-mail"></input>
-                </form>
+            <form enctype="application/x-www-form-urlencoded" id="try-it" method="POST"
+                action="https://functions.yandexcloud.net/d4edsioq0odbmd9blij6">
+                <input id="join-input" name="email" placeholder="e-mail">
+                <input type="submit" hidden>
+            </form>
             </p>
         </div>
     </div>
 </body>
+<script src="./js/app.js"></script>
 
 </html>

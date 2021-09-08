@@ -7,7 +7,7 @@ let output = "./public/"
 let sources =
 {
   coffee: [
-    "./src/*.coffee"
+    "./src/*.js"
   ],
   html: [
     "./src/html/*.html",
@@ -48,7 +48,7 @@ function html() {
     .pipe(gulp.dest(output));
 }
 
-function coffee() {
+function js() {
   const browserify = require('browserify')
   const uglify = require('gulp-uglify')
 
@@ -58,7 +58,6 @@ function coffee() {
   const globby = require('globby')
 
   gulp.src(sources.coffee[0])
-    .pipe(require('gulp-coffee')({ bare: true }))
     .pipe(gulp.dest(output));
 
   var stream = through()
@@ -83,7 +82,7 @@ function coffee() {
 }
 
 exports.default = function () {
-  watch(sources.coffee[0], coffee)
+  watch(sources.coffee[0], js)
   watch(sources.html[0], html)
   watch(sources.html[1], html)
   watch(sources.css[0], css)
