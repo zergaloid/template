@@ -1,10 +1,12 @@
 {
   "name": "syncia",
   "scripts": {
-    "node:dev": "cd node && npm run ix:dev",
-    "web:dev": "npx sirv-cli web --dev"
+    "web:dev": "sirv web --dev",
+    "scss:dev": "node_modules/.bin/node-sass -w web/src/styles/index.scss web/src/styles/index.css & node_modules/.bin/node-sass -w web/src/styles/landing.scss web/src/styles/landing.css"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.7",
+    "sirv-cli": "^1.0.14"
   }
 }

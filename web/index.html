@@ -11,10 +11,8 @@
 <body>
 
     <div id="core-box">[]
-        <div id="bottom-box">[]</div>
     </div>
     <div id="top-box">[]</div>
-    <div id="side-box">[]</div>
 
     <div id="profile">[]</div>
 
@@ -22,14 +20,10 @@
         const fetchFrom = window.location.hostname != "localhost" ? "https://syncia.net/dyn" : ''
 
         dyn(`${fetchFrom}/src/modules/Bar/Server`, "#top-box", {});
-        dyn(`${fetchFrom}/src/modules/Bar/Side`, "#side-box", {});
         dyn(`${fetchFrom}/src/modules/Bar/Profile`, "#profile", {});
         dyn(`${fetchFrom}/src/modules/Bar/Input`, "#bottom-box", {});
         dyn(`${fetchFrom}/src/modules/Chat/Messages`, "#core-box", {});
-
-        // Settings
-        dyn(`${fetchFrom}/src/modules/Settings/Categories`, "#side-box", {});
-        // dyn(`${fetchFrom}/src/modules/Settings/Options`, "#core-box", {});
+        dyn(`${fetchFrom}/src/modules/Chat/Message`, "#messages", {});
     </script>
 </body>
 
