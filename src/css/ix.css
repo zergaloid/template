@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url("includes/header.css");
 
+html, body
+{
+    height: 100%;
+}
+
 :root
 {
     --color-primary: #65655e;
@@ -36,4 +41,12 @@ button:hover
 {
     box-shadow: 0 3px 10px var(--color-nouaveu-blurple);
     border-radius: 7px;
+}
+
+#thisis
+{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
