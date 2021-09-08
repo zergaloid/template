@@ -1,5 +1,6 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("includes/header.css");
 
 :root
 {
@@ -35,31 +36,4 @@ button:hover
 {
     box-shadow: 0 3px 10px var(--color-nouaveu-blurple);
     border-radius: 7px;
-}
-
-header
-{
-    display: flex;
-    color: var(--color-secondary);
-    padding: 1em;
-    background-color: var(--color-primary);
-    img
-    {
-        width: 2.5vw;
-    }
-    #breaker
-    {
-        flex-grow: 1;
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-    }
-    div
-    {
-        *
-        {
-            margin-right: 1vh;
-        }
-    }
 }

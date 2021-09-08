@@ -10,29 +10,41 @@ let sources =
     "./src/*.coffee"
   ],
   html: [
-    "./src/html/*.html"
+    "./src/html/*.html",
+    "./src/html/*/*.html"
   ],
   css: [
-    "./src/css/*.css"
+    "./src/css/*.css",
+    "./src/css/*/*.css"
   ]
 }
 
 function css() {
   const postcss = require('gulp-postcss')
 
-  return gulp.src(sources.css[0])
+   gulp.src(sources.css[0])
+  .pipe(postcss([require('autoprefixer'), require('postcss-nested')]))
+  .pipe(gulp.dest('./public/css'))
+
+  return gulp.src(sources.css[1])
     .pipe(postcss([require('autoprefixer'), require('postcss-nested')]))
     .pipe(gulp.dest('./public/css'))
 }
 
 function html() {
   const webp = require('gulp-webp')
+  const importer = require('gulp-html-import');
 
   gulp.src('src/img/*.png')
   .pipe(webp())
   .pipe(gulp.dest('public/img/'))
 
-  return gulp.src(sources.html[0])
+  gulp.src(sources.html[0])
+    .pipe(importer('./src/html/'))
+    .pipe(gulp.dest(output));
+
+  return gulp.src(sources.html[1])
+    .pipe(importer('./src/html/'))
     .pipe(gulp.dest(output));
 }
 
@@ -73,5 +85,7 @@ function coffee() {
 exports.default = function () {
   watch(sources.coffee[0], coffee)
   watch(sources.html[0], html)
+  watch(sources.html[1], html)
   watch(sources.css[0], css)
+  watch(sources.css[1], css)
 }
