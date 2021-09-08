@@ -1,2 +1,3 @@
-console.log "Coffee"
-console.log "TS"
+log = require "./log"
+
+log.log("Hello")

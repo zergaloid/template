@@ -17,9 +17,14 @@ let sources =
   coffee: [
     "./src/*.coffee"
   ],
-  browser: [
-    "."
+  html: [
+    "./src/html/*.html"
   ]
+}
+
+function html() {
+  gulp.src(sources.html[0])
+    .pipe(gulp.dest(output));
 }
 
 function coffee() {
@@ -50,4 +55,5 @@ function coffee() {
 
 exports.default = function () {
   watch(sources.coffee[0], coffee)
+  watch(sources.html[0], html)
 }
