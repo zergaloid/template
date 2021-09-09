@@ -9,8 +9,7 @@ html {
   width: 100%;
 }
 
-body
-{
+body {
   height: 100%;
   width: 100%;
   padding: 0;
@@ -121,7 +120,11 @@ input:focus {
 
 #this-is {
   display: flex;
-  padding-top: 10vh;
+  padding-top: 5vh;
+
+  @media (max-height: 800px) {
+    padding-top: 10vh;
+  }
   align-items: center;
   justify-content: center;
   flex-direction: column;

@@ -1,6 +1,9 @@
 footer {
   position: fixed;
   bottom: 0;
+  @media (max-height: 872px) {
+    position: relative;
+  }
   text-align: center;
   color: var(--color-secondary);
   padding-top: 10px;
