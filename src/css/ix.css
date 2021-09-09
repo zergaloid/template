@@ -31,8 +31,8 @@ body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(107.87deg, #ffecf7 12.19%, rgba(255, 219, 207, 0.880208) 38.63%, rgba(250, 198, 229, 0.4) 83.69%) no-repeat;
-  background-size: 400% 400%;
-  animation: background 5s infinite linear;
+  background-size: 600% 600%;
+  animation: background 10s infinite linear;
 }
 
 :root {
@@ -63,7 +63,7 @@ input {
 }
 
 input {
-  box-shadow: -3px -3px 2px var(--color-lemonade);
+  box-shadow: -1px -1px 2px var(--color-nouaveu-blurple);
   border-bottom: solid 2px var(--color-nouaveu-blurple);
   border-right: solid 3px var(--color-nouaveu-blurple);
   max-width: 85%;
