@@ -1,0 +1,30 @@
+footer {
+
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  color: var(--color-secondary);
+  padding: 1em;
+  background-color: var(--color-primary);
+
+  @media (max-width: 1500px)
+  {
+    margin-top: 5em;
+    position: static;
+  }
+
+
+  img {
+    width: 40px;
+    height: auto;
+  }
+
+  div {
+    * {
+      margin-right: 1vh;
+    }
+  }
+}

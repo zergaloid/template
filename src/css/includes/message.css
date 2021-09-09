@@ -34,7 +34,7 @@
 
 .message[name="a"]
 {
-    box-shadow: -3px 5px 10px var(--color-nouaveu-blurple);
+    box-shadow: 3px 5px 10px var(--color-nouaveu-blurple);
 }
 
 .message[name="b"]
