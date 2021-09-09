@@ -1,28 +1,34 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
 @import url("includes/footer.css");
 @import url("includes/header.css");
 @import url("includes/message.css");
 
 html {
-  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+body
+{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
+  height: 100%;
   --color-primary: #65655e;
   --color-secondary: white;
   --color-nouaveu-blurple: #7d80da;
   --color-lemonade: #f7cb15;
-  margin: 0;
   background: linear-gradient(107.87deg, #ffecf7 12.19%, rgba(255, 219, 207, 0.880208) 38.63%, rgba(250, 198, 229, 0.4) 83.69%) 400% 400% no-repeat;
   background-attachment: fixed;
   animation: background 10s infinite linear;
   font-family: 'Ubuntu', sans-serif;
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  margin: 0px;
 }
 
 @keyframes background {
@@ -81,8 +87,8 @@ input:focus {
 }
 
 #decor {
+  margin-top: 1em;
   position: relative;
-
   width: 100%;
   display: flex;
 
@@ -91,7 +97,6 @@ input:focus {
   }
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
 
   img {
     max-height: 50vh;
@@ -105,14 +110,13 @@ input:focus {
   }
 
   img:nth-of-type(2) {
-    transform: rotate(200deg);
+    transform: flipY(1);
     filter: drop-shadow(0 3px 10px var(--color-lemonade));
   }
 
   img:nth-of-type(2):hover {
     filter: drop-shadow(0 5px 15px var(--color-lemonade));
   }
-
 }
 
 #this-is {
