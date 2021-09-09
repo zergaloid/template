@@ -9,27 +9,6 @@ html {
   width: 100%;
 }
 
-body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-:root {
-  height: 100%;
-  --color-primary: #65655e;
-  --color-secondary: white;
-  --color-nouaveu-blurple: #7d80da;
-  --color-lemonade: #f7cb15;
-  background: linear-gradient(107.87deg, #ffecf7 12.19%, rgba(255, 219, 207, 0.880208) 38.63%, rgba(250, 198, 229, 0.4) 83.69%) 400% 400% no-repeat;
-  background-attachment: fixed;
-  animation: background 10s infinite linear;
-  font-family: 'Ubuntu', sans-serif;
-}
-
 @keyframes background {
   0% {
     background-position: 0% 50%;
@@ -42,6 +21,27 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(107.87deg, #ffecf7 12.19%, rgba(255, 219, 207, 0.880208) 38.63%, rgba(250, 198, 229, 0.4) 83.69%) no-repeat;
+  background-size: 400% 400%;
+  animation: background 5s infinite linear;
+}
+
+:root {
+  height: 100%;
+  --color-primary: #65655e;
+  --color-secondary: white;
+  --color-nouaveu-blurple: #7d80da;
+  --color-lemonade: #f7cb15;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a {
