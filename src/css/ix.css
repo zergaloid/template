@@ -1,9 +1,10 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url("includes/header.css");
 
-html,
-body {
+@import url("includes/header.css");
+@import url("includes/message.css");
+
+html, body {
   height: 100%;
 }
 
@@ -12,10 +13,17 @@ body {
   --color-secondary: white;
   --color-nouaveu-blurple: #7d80da;
   --color-lemonade: #f7cb15;
-  background: linear-gradient(107.87deg, #ffecf7 12.19%, rgba(255, 219, 207, 0.880208) 38.63%, rgba(250, 198, 229, 0.4) 83.69%);
-  background-size: 400% 400%;
+  background-image: url("../img/bg.svg");
+  background: linear-gradient(107.87deg, #ffecf7 12.19%, rgba(255, 219, 207, 0.880208) 38.63%, rgba(250, 198, 229, 0.4) 83.69%) 400% 400%;
   animation: background 10s infinite linear;
   font-family: 'Ubuntu', sans-serif;
+
+  display:flex;
+  flex-direction: column;
+
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 @keyframes background {
@@ -66,39 +74,19 @@ input:focus {
   border-radius: 7px;
 }
 
-.message {
-  display: flex;
-  flex-direction: column;
-  vertical-align: middle;
-  background-color: var(--color-secondary);
-  border-radius: 0.5em;
-  margin-bottom: 0.5em;
-  box-shadow: -3px -3px 0 var(--color-primary);
-  width: 50vw;
-
-  #meta {
-    align-items: center;
+.breaker
+{
+    flex: 1;
     display: flex;
-    vertical-align: middle;
 
-    #author {
-      font-size: 1.2em;
-      padding-right: 1em;
-    }
+    align-items: center;
+    justify-content: center;
+}
 
-    #breaker {
-      flex-grow: 1;
-    }
-
-    #date {
-      justify-content: center;
-    }
-
-    p {
-      padding-bottom: 0.5em;
-      padding-top: 0.5em;
-    }
-  }
+img
+{
+  width: 100%;
+  max-height: 100%;
 }
 
 #this-is {

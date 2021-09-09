@@ -11,26 +11,26 @@
 <body>
     @import "./includes/header.html"
     <div id="this-is">
-        <div class="message">
+        <div class="message" name="a">
             <span id="meta">
                 <p id="author">A</p>
-                <span id="breaker"></span>
+                <span class="breaker"></span>
                 <p id="date">02-10-21 19:30</p>
             </span>
             <p id="content">This is a closed beta for an innovative chat app!</p>
         </div>
-        <div class="message">
+        <div class="message" name="b">
             <span id="meta">
                 <p id="author">B</p>
-                <span id="breaker"></span>
+                <span class="breaker"></span>
                 <p id="date">02-10-21 19:31</p>
             </span>
             <p id="content">What's sooooo "innovative" about it?</p>
         </div>
-        <div class="message">
+        <div class="message" name="a">
             <span id="meta">
                 <p id="author">A</p>
-                <span id="breaker"></span>
+                <span class="breaker"></span>
                 <p id="date">02-10-21 19:33</p>
             </span>
             <p id="content">
@@ -40,10 +40,10 @@
                 Online and offline. On a plane and underwater - anywhere
             </p>
         </div>
-        <div class="message">
+        <div class="message" name="b">
             <span id="meta">
                 <p id="author">B</p>
-                <span id="breaker"></span>
+                <span class="breaker"></span>
                 <p id="date">02-10-21 19:34</p>
             </span>
             <p id="content">
@@ -51,10 +51,10 @@
             </pre>
             </p>
         </div>
-        <div class="message">
+        <div class="message" name="a">
             <span id="meta">
                 <p id="author">A</p>
-                <span id="breaker"></span>
+                <span class="breaker"></span>
                 <p id="date">02-10-21 19:34</p>
             </span>
             <p id="content">
@@ -65,13 +65,13 @@
         <div class="message">
             <span id="meta">
                 <p id="author">You</p>
-                <span id="breaker"></span>
+                <span class="breaker"></span>
                 <p id="date">JO-IN-THE BE:TA</p>
             </span>
             <p id="content">
             <form id="try-it" method="POST"
                 action="https://functions.yandexcloud.net/d4edsioq0odbmd9blij6">
-                <input id="join-input" name="email" placeholder="e-mail" required>
+                <input id="join-input" name="email" type="email"  placeholder="e-mail" required>
                 <input type="submit" hidden>
             </form>
             </p>

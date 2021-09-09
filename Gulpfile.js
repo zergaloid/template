@@ -39,6 +39,9 @@ function html() {
   .pipe(webp())
   .pipe(gulp.dest('public/img/'))
 
+  gulp.src('src/img/*.svg')
+  .pipe(gulp.dest('public/img/'))
+  
   gulp.src(sources.html[0])
     .pipe(importer('./src/html/'))
     .pipe(gulp.dest(output));
@@ -71,7 +74,7 @@ function js() {
   globby(["./public/*.js"]).then((files) => {
     let b = browserify({
       entries: files,
-      debug: true
+      debug: false
     });
 
     b.bundle().pipe(stream);
