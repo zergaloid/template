@@ -110,7 +110,7 @@ input:focus {
   }
 
   img:nth-of-type(2) {
-    transform: flipY(1);
+    transform: scaleX(-1) scaleY(-1);
     filter: drop-shadow(0 3px 10px var(--color-lemonade));
   }
 
