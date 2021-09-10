@@ -37,7 +37,7 @@ body {
 
 :root {
   height: 100%;
-  --color-primary: #3C91E6;
+  --color-primary: #F50056;
   --color-primary-darker: #092948;
   --color-secondary: #FFEBF2;
   --color-tertiary: #FF206E;
@@ -146,7 +146,6 @@ input:focus {
 #this-is {
 
   display: flex;
-  padding-top: 5vh;
 
   @media (max-height: 800px) {
     padding-top: 10vh;
