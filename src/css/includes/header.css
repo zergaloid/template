@@ -1,5 +1,6 @@
 header
 {
+    font-family: 'Inter', sans-serif;
     p
     {
         padding: 1vh;
@@ -12,7 +13,6 @@ header
     display: flex;
     color: var(--color-secondary);
     padding: 1em;
-    background-color: var(--color-primary);
     img
     {
         width: 40px;

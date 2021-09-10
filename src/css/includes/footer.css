@@ -1,4 +1,5 @@
 footer {
+  font-family: 'Inter', sans-serif;
   position: fixed;
   bottom: 0;
   @media (max-height: 872px) {
