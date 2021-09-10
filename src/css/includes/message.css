@@ -39,20 +39,20 @@
 
 .message[name="a"]
 {
-  border-bottom: 10px solid var(--color-nouaveu-blurple);
+  border-bottom: 10px solid var(--color-tertiary);
   border-right: 15px solid var(--color-lemonade);
 }
 
 .message[name="b"]
 {
   border-bottom: 10px solid var(--color-lemonade);
-  border-right: 15px solid var(--color-nouaveu-blurple);
+  border-right: 15px solid var(--color-tertiary);
 }
 
 .message[name="you"]
 {
   border-bottom: 10px solid var(--color-lemonade);
-  border-right: 15px solid var(--color-nouaveu-blurple);
+  border-right: 15px solid var(--color-tertiary);
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
