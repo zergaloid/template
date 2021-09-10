@@ -1,5 +1,14 @@
 header
 {
+    p
+    {
+        padding: 1vh;
+        color: var(--color-secondary);
+    }
+    a
+    {
+        font-weight: bold;
+    }
     display: flex;
     color: var(--color-secondary);
     padding: 1em;

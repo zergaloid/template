@@ -32,11 +32,11 @@ function css() {
 }
 
 function html() {
-  const webp = require('gulp-webp')
+  const image = require('gulp-image')
   const importer = require('gulp-html-import');
 
-  gulp.src('src/img/*.png')
-  .pipe(webp())
+  gulp.src('src/img/*')
+  .pipe(image())
   .pipe(gulp.dest('public/img/'))
 
   gulp.src('src/img/*.svg')

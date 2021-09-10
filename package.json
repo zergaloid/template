@@ -10,6 +10,7 @@
     "gulp": "^4.0.2",
     "gulp-coffee": "^3.0.3",
     "gulp-html-import": "^0.0.2",
+    "gulp-image": "^6.2.1",
     "gulp-imagemin": "7.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-uglify": "^3.0.2",

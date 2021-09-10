@@ -30,14 +30,13 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(107.87deg, #ffecf7 12.19%, rgba(255, 219, 207, 0.880208) 38.63%, rgba(250, 198, 229, 0.4) 83.69%) no-repeat;
-  background-size: 600% 600%;
-  animation: background 10s infinite linear;
+  background: var(--color-primary-darker);
 }
 
 :root {
   height: 100%;
   --color-primary: #65655e;
+  --color-primary-darker: #65697e;
   --color-secondary: white;
   --color-nouaveu-blurple: #7d80da;
   --color-lemonade: #f7cb15;
@@ -47,6 +46,11 @@ body {
 a {
   color: var(--color-secondary);
   text-decoration: none;
+}
+
+.email-link
+{
+  text-decoration: underline;
 }
 
 button,
@@ -67,6 +71,8 @@ input {
   border-bottom: solid 2px var(--color-nouaveu-blurple);
   border-right: solid 3px var(--color-nouaveu-blurple);
   max-width: 85%;
+  border-radius: 7px;
+  outline: none;
 }
 
 button:hover,
@@ -86,10 +92,22 @@ input:focus {
 }
 
 #decor {
+
+
+  color: var(--color-secondary);  
+
+  p
+  {
+    margin: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
   margin-top: 1em;
   position: relative;
   width: 100%;
   display: flex;
+  flex-direction: column;
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -97,7 +115,10 @@ input:focus {
   align-items: center;
   justify-content: center;
 
+  
   img {
+    padding-bottom: 1em;
+    border-radius: 10em;
     max-height: 50vh;
     max-width: 70vw;
     filter: drop-shadow(0 3px 10px var(--color-nouaveu-blurple));
@@ -119,6 +140,7 @@ input:focus {
 }
 
 #this-is {
+
   display: flex;
   padding-top: 5vh;
 
