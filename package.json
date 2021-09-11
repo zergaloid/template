@@ -2,7 +2,7 @@
   "name": "syncia",
   "scripts": {
     "dev:web": "gulp",
-    "show:web": "sirv public",
+    "show:web": "sirv public --dev",
     "web": "npm run dev:web & npm run show:web"
   },
   "devDependencies": {
