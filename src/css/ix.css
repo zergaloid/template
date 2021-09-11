@@ -120,7 +120,7 @@ input:focus {
 
   p {
     margin: 2em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
   }
 
@@ -141,7 +141,7 @@ input:focus {
   display: flex;
 
   @media (max-height: 800px) {
-    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
   align-items: center;
   justify-content: center;
@@ -154,19 +154,10 @@ input:focus {
 
 #click-it
 {
-  margin-left: 2em;
-  margin-right: 2em;
-  padding: 1em;
-}
-
-.rainbow-unicorn-container
-{
-  flex-direction: column;
-}
-
-#rainbow-unicorn
-{
-  border-radius: 7px;
+  @media (max-width: 800px) {
+    display: none;
+  }
+  grid-column: 1/4;
 }
 
 @media (max-width: 800px) {
