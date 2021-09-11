@@ -1,7 +1,5 @@
 @import "reset.css";
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@400;500;700&display=swap');
-
 @import url("includes/footer.css");
 @import url("includes/header.css");
 @import url("includes/message.css");
@@ -37,11 +35,12 @@ body {
 
 :root {
   height: 100%;
-  --color-primary: #F50056;
+  --color-primary: #3c91e6;
   --color-primary-darker: #092948;
-  --color-secondary: #FFEBF2;
-  --color-tertiary: #FF206E;
-  --color-lemonade: #FF0A60;
+  --color-secondary: #ffebf2;
+  --color-tertiary: #d5265b;
+  --color-tertiary-darker: rgb(30, 30, 30);
+  --color-lemonade: #ff7514;
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -50,8 +49,7 @@ a {
   text-decoration: none;
 }
 
-.email-link
-{
+.email-link {
   text-decoration: underline;
 }
 
@@ -95,8 +93,9 @@ input:focus {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -104,28 +103,25 @@ input:focus {
 }
 
 .container-block {
-  background: linear-gradient(to bottom,#e9ecf1,#c7cdd7);
+  background: var(--color-secondary);
   border-radius: 7px;
   margin: 1em;
   padding: 1em;
-  p
-  {
+
+  p {
     margin: 2em;
     font-size: 1.5em;
     font-weight: bold;
   }
-
   margin-top: 1em;
   position: relative;
   text-align: center;
 
-  
   img {
     padding-bottom: 1em;
     border-radius: 10em;
     max-height: 50vh;
     max-width: 70vw;
-    filter: drop-shadow(0 3px 10px var(--color-tertiary));
     transition: filter 0.5s ease-in-out;
   }
 
@@ -143,8 +139,9 @@ input:focus {
   }
 }
 
-#this-is {
 
+
+#this-is {
   display: flex;
 
   @media (max-height: 800px) {
@@ -159,9 +156,8 @@ input:focus {
   }
 }
 
-@media(max-width: 800px) {
-  .desktop-only
-  {
+@media (max-width: 800px) {
+  .desktop-only {
     display: none;
   }
 }
