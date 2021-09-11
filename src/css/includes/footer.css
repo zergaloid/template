@@ -9,6 +9,6 @@ footer {
   color: var(--color-secondary);
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: var(--color-primary);
+  background-color: var(--color-tertiary);
   width: 100%;
 }
