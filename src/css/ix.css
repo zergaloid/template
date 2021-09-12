@@ -94,7 +94,10 @@ input:focus {
 .container {
   height: 100%;
   margin: 1em;
-  padding-bottom: 5em; 
+  padding-bottom: 5em;
+  
+  justify-content: center;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
