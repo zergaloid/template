@@ -1,11 +1,10 @@
 .message {
-  margin: 0.5em;
-
   display: flex;
   flex-direction: column;
   vertical-align: middle;
   background-color: var(--color-secondary);
   width: 50vw;
+
   #meta {
     align-items: center;
     display: flex;
@@ -29,28 +28,22 @@
       padding-top: 0.5em;
     }
   }
+
+  margin: 0.5em;
+  padding: 0.5em;
 }
 
-.message:nth-of-type(1)
-{
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.message[name="a"]
-{
+.message[name="a"] {
   border-bottom: 10px solid var(--color-tertiary);
   border-right: 15px solid var(--color-lemonade);
 }
 
-.message[name="b"]
-{
+.message[name="b"] {
   border-bottom: 10px solid var(--color-lemonade);
   border-right: 15px solid var(--color-tertiary);
 }
 
-.message[name="you"]
-{
+.message[name="you"] {
   border-bottom: 10px solid var(--color-lemonade);
   border-right: 15px solid var(--color-tertiary);
   border-bottom-right-radius: 6px;
