@@ -7,7 +7,8 @@ let output = "./public/"
 let sources =
 {
   js: [
-    "./src/*.js"
+    "./src/*.js",
+    "./src/*.json"
   ],
   html: [
     "./src/html/*.html",
@@ -35,14 +36,8 @@ function html() {
   const image = require('gulp-image')
   const importer = require('gulp-html-import');
 
-  gulp.src('src/*.json')
-    .pipe(gulp.dest('public/'))
-
   gulp.src('src/img/*')
     .pipe(image())
-    .pipe(gulp.dest('public/img/'))
-
-  gulp.src('src/img/*.svg')
     .pipe(gulp.dest('public/img/'))
 
   gulp.src(sources.html[0])
@@ -57,6 +52,9 @@ function html() {
 function js() {
   const uglify = require('gulp-uglify')
 
+  gulp.src('src/*.json')
+    .pipe(gulp.dest('public/'))
+
   return gulp.src(sources.js[0])
     .pipe(uglify())
     .pipe(gulp.dest(output));
@@ -64,6 +62,7 @@ function js() {
 
 exports.default = function () {
   watch(sources.js[0], js)
+  watch(sources.js[1], js)
   watch(sources.html[0], html)
   watch(sources.html[1], html)
   watch(sources.css[0], css)
