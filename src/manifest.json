@@ -1,0 +1,29 @@
+{
+    "name": "Syncia",
+    "short_name": "Syncia",
+    "start_url": "/app?pwa",
+    "display": "standalone",
+    "background_color": "#d5265b",
+    "lang": "en",
+    "scope": "/app",
+    "description": "Simpler chat",
+    "categories": [
+        "messaging"
+    ],
+    "orientation": "portrait",
+    "theme_color": "#d5265b",
+    "icons": [
+        {
+            "src": "/img/logo.svg",
+            "type": "image/svg+xml",
+            "sizes": "48x48 72x72 96x96 128x128 256x256",
+            "purpose": "any"
+        },
+        {
+            "src": "/img/maskable-logo.png",
+            "type": "image/png",
+            "sizes": "1024x1024",
+            "purpose": "maskable"
+        }
+    ]
+}
