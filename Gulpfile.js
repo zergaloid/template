@@ -6,7 +6,7 @@ const { watch, series } = gulp
 let output = "./public/"
 let sources =
 {
-  coffee: [
+  js: [
     "./src/*.js"
   ],
   html: [
@@ -55,17 +55,15 @@ function html() {
 }
 
 function js() {
-  var workbox = require('gulp-workbox');
-
   const uglify = require('gulp-uglify')
 
-  return gulp.src(sources.coffee[0])
+  return gulp.src(sources.js[0])
     .pipe(uglify())
     .pipe(gulp.dest(output));
 }
 
 exports.default = function () {
-  watch(sources.coffee[0], js)
+  watch(sources.js[0], js)
   watch(sources.html[0], html)
   watch(sources.html[1], html)
   watch(sources.css[0], css)
