@@ -3,6 +3,7 @@
 @import url("includes/footer.css");
 @import url("includes/header.css");
 @import url("includes/message.css");
+@import url("includes/containers.css");
 
 html {
   height: 100%;
@@ -39,7 +40,7 @@ body {
   --color-primary-darker: #092948;
   --color-secondary: #ffebf2;
   --color-tertiary: #d5265b;
-  --color-tertiary-darker: rgb(30, 30, 30);
+  --color-tertiary-darker: #1e1e1e;
   --color-lemonade: #ff7514;
   font-family: 'Space Grotesk', sans-serif;
 }
@@ -90,56 +91,6 @@ input:focus {
   align-items: center;
   justify-content: center;
 }
-
-.container {
-  height: 100%;
-  margin: 1em;
-  padding-bottom: 5em;
-  
-  justify-content: center;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  @media (max-width: 800px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-
-.container-block {
-  a {
-    color: var(--color-tertiary);
-    text-decoration: underline;
-  }
-
-  border-radius: 7px;
-  background: var(--color-secondary);
-  padding: 1em;
-  margin: 1em;
-
-  display:flex;
-  align-items: center;
-  justify-content: center;
-
-  p {
-    margin: 2em;
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-
-  #icon {
-    width: 50px;
-    height: auto;
-    transition: filter 0.5s ease-in-out;
-  }
-
-  img:hover {
-    filter: drop-shadow(0 5px 15px var(--color-tertiary));
-  }
-
-}
-
 
 #this-is {
   display: flex;

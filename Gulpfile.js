@@ -22,9 +22,9 @@ let sources =
 function css() {
   const postcss = require('gulp-postcss')
 
-   gulp.src(sources.css[0])
-  .pipe(postcss([require('autoprefixer'), require('postcss-nested')]))
-  .pipe(gulp.dest('./public/css'))
+  gulp.src(sources.css[0])
+    .pipe(postcss([require('autoprefixer'), require('postcss-nested')]))
+    .pipe(gulp.dest('./public/css'))
 
   return gulp.src(sources.css[1])
     .pipe(postcss([require('autoprefixer'), require('postcss-nested')]))
@@ -35,13 +35,16 @@ function html() {
   const image = require('gulp-image')
   const importer = require('gulp-html-import');
 
+  gulp.src('src/*.json')
+    .pipe(gulp.dest('public/'))
+
   gulp.src('src/img/*')
-  .pipe(image())
-  .pipe(gulp.dest('public/img/'))
+    .pipe(image())
+    .pipe(gulp.dest('public/img/'))
 
   gulp.src('src/img/*.svg')
-  .pipe(gulp.dest('public/img/'))
-  
+    .pipe(gulp.dest('public/img/'))
+
   gulp.src(sources.html[0])
     .pipe(importer('./src/html/'))
     .pipe(gulp.dest(output));
@@ -52,36 +55,13 @@ function html() {
 }
 
 function js() {
-  const browserify = require('browserify')
+  var workbox = require('gulp-workbox');
+
   const uglify = require('gulp-uglify')
 
-  const through = require('through2')
-  const source = require('vinyl-source-stream')
-  const buffer = require('vinyl-buffer')
-  const globby = require('globby')
-
-  gulp.src(sources.coffee[0])
-    .pipe(gulp.dest(output));
-
-  var stream = through()
-
-  stream
-    .pipe(source('app.js'))
-    .pipe(buffer())
+  return gulp.src(sources.coffee[0])
     .pipe(uglify())
-    .pipe(gulp.dest('./public/js/'))
-
-  globby(["./public/*.js"]).then((files) => {
-    let b = browserify({
-      entries: files,
-      debug: false
-    });
-
-    b.bundle().pipe(stream);
-  }).catch((e) => {
-    stream.emit('error', e)
-  })
-  return stream;
+    .pipe(gulp.dest(output));
 }
 
 exports.default = function () {

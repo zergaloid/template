@@ -15,8 +15,8 @@ header
     padding: 1em;
     img
     {
-        width: 40px;
-        height: auto;
+        height: 40px;
+        width: auto;
         cursor: pointer;
     }
     div
