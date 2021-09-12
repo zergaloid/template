@@ -20,9 +20,11 @@ window.onload = () => {
         default:
             break;
     }
-    let button = document.getElementById('app-button')
-    button.onclick = () => {
-        window.location.assign('/app.html')
+    if (link !== "app.html") {
+        let button = document.getElementById('app-button')
+        button.onclick = () => {
+            window.location.assign('/app.html')
+        }
     }
 }
 
