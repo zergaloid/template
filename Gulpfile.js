@@ -36,15 +36,13 @@ function html() {
   const image = require('gulp-image')
   const importer = require('gulp-html-import');
 
+
   gulp.src('src/img/*')
     .pipe(image())
     .pipe(gulp.dest('public/img/'))
 
-  gulp.src(sources.html[0])
-    .pipe(importer('./src/html/'))
-    .pipe(gulp.dest(output));
 
-  return gulp.src(sources.html[1])
+  return gulp.src(sources.html[0])
     .pipe(importer('./src/html/'))
     .pipe(gulp.dest(output));
 }

@@ -3,11 +3,11 @@
   "scripts": {
     "dev:web": "gulp",
     "show:web": "sirv public --dev",
-    "web": "npm run dev:web & npm run show:web"
+    "web": "npm run dev:web & npm run show:web",
+    "deploy": "rclone sync --http-headers '\"Content-Type\",\"text/html; charset=UTF-8\"' public s3://syncia.net/"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
-    "globby": "10.0.1",
     "gulp": "^4.0.2",
     "gulp-html-import": "^0.0.2",
     "gulp-image": "^6.2.1",
