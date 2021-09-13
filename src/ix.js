@@ -20,12 +20,12 @@ window.onload = () => {
         default:
             break;
     }
-    if (link !== "app.html") {
-        let button = document.getElementById('app-button')
-        button.onclick = () => {
-            window.location.assign('/app.html')
-        }
-    }
+    // if (link !== "app.html") {
+    //     let button = document.getElementById('app-button')
+    //     button.onclick = () => {
+    //         window.location.assign('/app.html')
+    //     }
+    // }
 }
 
 if ('serviceWorker' in navigator) {

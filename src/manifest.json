@@ -1,11 +1,11 @@
 {
     "name": "Syncia",
     "short_name": "Syncia",
-    "start_url": "/app?pwa",
+    "start_url": "/app.html",
     "display": "standalone",
     "background_color": "#d5265b",
     "lang": "en",
-    "scope": "/app",
+    "scope": "/",
     "description": "Simpler chat",
     "categories": [
         "messaging"

@@ -124,7 +124,11 @@ input:focus {
   padding: 1em;
   border-radius: 7px;
 
+  display: flex;
+
   img {
+    padding-left: 2px;
+    padding-right: 2px;
     width: 60px;
     border-radius: 7px;
   }
@@ -136,8 +140,12 @@ input:focus {
   padding: 1em;
   border-radius: 7px;
 
+  display: flex;  
+
   img {
-    width: 60px;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 30px;
     border-radius: 7px;
   }
 }
@@ -145,6 +153,9 @@ input:focus {
 #app
 {
   display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 }
 
 #messages
@@ -152,14 +163,33 @@ input:focus {
   flex: 1;
   max-height: 100vh;
   overflow: scroll;
-  .message
-  {
-
-  }
 }
 
 @media (max-width: 800px) {
+  .message
+  {
+    width: 94vw;
+  }
   .desktop-only {
-    display: none;
+    display: none !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .message
+  {
+    width: 80vw;
+  }
+  .mobile-only {
+    display: none !important;
+
+  }
+  #servers
+  {
+    flex-direction: column;
+  }
+  #members
+  {
+    flex-direction: column;
   }
 }
