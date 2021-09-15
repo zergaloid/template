@@ -1,14 +1,9 @@
 header
 {
-    font-family: 'Inter', sans-serif;
     p
     {
         padding: 1vh;
         color: var(--color-secondary);
-    }
-    a
-    {
-        font-weight: bold;
     }
     display: flex;
     color: var(--color-secondary);
@@ -18,12 +13,5 @@ header
         height: 40px;
         width: auto;
         cursor: pointer;
-    }
-    div
-    {
-        *
-        {
-            margin-right: 1vh;
-        }
     }
 }

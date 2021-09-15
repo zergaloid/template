@@ -1,11 +1,12 @@
 footer {
-  font-family: 'Inter', sans-serif;
   position: fixed;
   bottom: 0;
+  text-align: center;
+
   @media (max-height: 872px) {
     position: relative;
   }
-  text-align: center;
+  
   color: var(--color-secondary);
   padding-top: 10px;
   padding-bottom: 10px;

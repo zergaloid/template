@@ -2,30 +2,12 @@
 <html lang="en">
 
 <head>
-    @import "./includes/meta.html"
+    @include "./includes/meta.html"
 </head>
 
 <body>
-    @import "./includes/header.html"
-    <div class="container">
-        <div class="container-block">
-            <img alt="User icon" id="icon" src="./img/user.svg">
-            <p>Syncia's made for you (and your friends... and your friends' friends)</p>
-        </div>
-        <div class="container-block">
-            <img alt="Lighting icon" id="icon" src="./img/lighting.svg">
-            <p>Syncia's fast (like, really fast)</p>
-        </div>
-        <div class="container-block">
-            <img alt="Brush icon" id="icon" src="./img/brush.svg">
-            <p>If you are a designer, e-mail me at <a href="mailto:hello@zergal.net">hello@zergal.net</a></p>
-        </div>
-        <div class="container-block" id="click-it">
-            <p>To sign up for the beta, click that <a href="./whatisthis.html">link</a> up at the top!</p>
-        </div>
-    </div>
-    <span class="breaker"></span>
-    @import "./includes/footer.html"
+    @include "./includes/header.html"
+    @include "./includes/footer.html"
 </body>
 
 </html>

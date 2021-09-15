@@ -1,9 +1,4 @@
 @import "reset.css";
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@400;500;700&display=swap');
-@import url("includes/footer.css");
-@import url("includes/header.css");
-@import url("includes/message.css");
-@import url("includes/containers.css");
 
 html {
   height: 100%;
@@ -41,16 +36,15 @@ body {
   --color-secondary: #ffebf2;
   --color-tertiary: #d5265b;
   --color-tertiary-darker: #1e1e1e;
-  --color-lemonade: #ff7514;
-  font-family: 'Space Grotesk', sans-serif;
 }
 
 a {
+  font-weight: bold;
   color: var(--color-secondary);
   text-decoration: none;
 }
 
-.email-link {
+a[type="email"] {
   text-decoration: underline;
 }
 
@@ -90,106 +84,4 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#this-is {
-  display: flex;
-
-  @media (max-height: 800px) {
-    padding-bottom: 10vh;
-  }
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  .message {
-    margin: 0.5em;
-  }
-  .message:nth-of-type(1) {
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
-  }
-}
-
-#click-it {
-  @media (max-width: 800px) {
-    display: none;
-  }
-  grid-column: 1 / 4;
-}
-
-#servers {
-  margin: 0.5em;
-  background-color: var(--color-tertiary);
-  padding: 1em;
-  border-radius: 7px;
-
-  display: flex;
-
-  img {
-    padding-left: 2px;
-    padding-right: 2px;
-    width: 60px;
-    border-radius: 7px;
-  }
-}
-
-#members {
-  margin: 0.5em;
-  background-color: var(--color-tertiary);
-  padding: 1em;
-  border-radius: 7px;
-
-  display: flex;  
-
-  img {
-    padding-left: 2px;
-    padding-right: 2px;
-    width: 30px;
-    border-radius: 7px;
-  }
-}
-
-#app
-{
-  display: flex;
-  @media (max-width: 800px) {
-    flex-direction: column;
-  }
-}
-
-#messages
-{
-  flex: 1;
-  max-height: 100vh;
-  overflow: scroll;
-}
-
-@media (max-width: 800px) {
-  .message
-  {
-    width: 94vw;
-  }
-  .desktop-only {
-    display: none !important;
-  }
-}
-
-@media (min-width: 800px) {
-  .message
-  {
-    width: 80vw;
-  }
-  .mobile-only {
-    display: none !important;
-
-  }
-  #servers
-  {
-    flex-direction: column;
-  }
-  #members
-  {
-    flex-direction: column;
-  }
 }

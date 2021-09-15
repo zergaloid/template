@@ -1,17 +1,17 @@
 {
-    "name": "Syncia",
-    "short_name": "Syncia",
+    "name": "TODO",
+    "short_name": "TODO",
     "start_url": "/app.html",
     "display": "standalone",
-    "background_color": "#d5265b",
+    "background_color": "#",
     "lang": "en",
     "scope": "/",
-    "description": "Simpler chat",
+    "description": "TODO",
     "categories": [
-        "messaging"
+        "TODO"
     ],
     "orientation": "portrait",
-    "theme_color": "#d5265b",
+    "theme_color": "#",
     "icons": [
         {
             "src": "/img/logo.svg",

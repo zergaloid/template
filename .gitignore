@@ -2,5 +2,8 @@
 *lock*
 node_modules
 
+# NPM
+modules
+
 # Compiled content
 public

@@ -1,15 +1,14 @@
 {
-  "name": "syncia",
+  "name": "TODO",
   "scripts": {
     "dev:web": "gulp",
     "show:web": "sirv public --dev",
-    "web": "npm run dev:web & npm run show:web",
-    "deploy": "rclone delete s3://syncia.net// && rclone sync --http-headers '\"Content-Type\",\"text/html; charset=UTF-8\"' public s3://syncia.net/"
+    "web": "npm run dev:web & npm run show:web"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
     "gulp": "^4.0.2",
-    "gulp-html-import": "^0.0.2",
+    "gulp-web-include": "^1.0.1",
     "gulp-image": "^6.2.1",
     "gulp-imagemin": "7.0.0",
     "gulp-postcss": "^9.0.1",
