@@ -65,6 +65,7 @@ function js() {
 }
 
 exports.default = function () {
+  img();
   // JS and JSON
   watch(sources.js[0], js)
   watch(sources.js[1], js)
