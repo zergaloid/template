@@ -14,11 +14,11 @@ let sources =
     "./src/*.js"
   ],
   html: [
-    "./src/html/*/*.html",
-    "./src/html/*.html"
+    "./src/html/*.html",
+    "./src/html/*/*.html"
   ],
   css: [
-    "./src/css/*.css",
+    "./src/css/ix.css",
     "./src/css/*/*.css"
   ]
 }
@@ -26,12 +26,9 @@ let sources =
 function css() {
   const postcss = require('gulp-postcss')
 
-  src(sources.css[0])
+  return src(sources.css[0])
     .pipe(postcss([require("postcss-import"), require('postcss-nested'), require('postcss-mixins'), require('postcss-css-variables'), require('autoprefixer')]))
-    .pipe(dest(`${output}/css`))
-
-  return src(sources.css[1])
-    .pipe(postcss([require("postcss-import"), require('postcss-nested'), require('postcss-mixins'), require('postcss-css-variables'), require('autoprefixer')]))
+    .pipe(require('gulp-clean-css')({compatibility: 'ie8'}))
     .pipe(dest(`${output}/css`))
 }
 
@@ -45,12 +42,9 @@ function img() {
 function html() {
   const importer = require('gulp-web-include');
   
-  src(sources.html[0])
+  return src(sources.html[0])
     .pipe(importer('./src/html/', "html"))
-    .pipe(dest(output));
-
-  return src(sources.html[1])
-    .pipe(importer('./src/html/', "html"))
+    .pipe(require('gulp-htmlmin')({ collapseWhitespace: true }))
     .pipe(dest(output));
 }
 

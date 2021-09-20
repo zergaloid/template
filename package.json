@@ -8,6 +8,7 @@
   "devDependencies": {
     "autoprefixer": "^10.3.4",
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-image": "^6.2.1",
     "gulp-imagemin": "7.0.0",
     "gulp-postcss": "^9.0.1",
@@ -19,5 +20,8 @@
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.6",
     "sirv-cli": "^1.0.14"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
   }
 }

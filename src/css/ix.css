@@ -1,6 +1,9 @@
 @import "reset.css";
 @import "vars.css";
 
+@import url("./includes/footer.css");
+@import url("./includes/header.css");
+
 html {
   height: 100%;
   width: 100%;
