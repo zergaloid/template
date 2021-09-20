@@ -28,7 +28,7 @@ function css() {
 
   return src(sources.css[0])
     .pipe(postcss([require("postcss-import"), require('postcss-nested'), require('postcss-mixins'), require('postcss-css-variables'), require('autoprefixer')]))
-    .pipe(require('gulp-clean-css')({compatibility: 'ie8'}))
+    .pipe(require('gulp-clean-css')({ compatibility: 'ie8' }))
     .pipe(dest(`${output}/css`))
 }
 
@@ -41,7 +41,7 @@ function img() {
 
 function html() {
   const importer = require('gulp-web-include');
-  
+
   return src(sources.html[0])
     .pipe(importer('./src/html/', "html"))
     .pipe(require('gulp-htmlmin')({ collapseWhitespace: true }))

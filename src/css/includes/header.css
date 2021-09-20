@@ -1,18 +1,17 @@
 @import "../vars.css";
-header
-{
-    p
-    {
-        padding: 1vh;
-        color: var(--color-secondary);
-    }
-    display: flex;
+
+header {
+  p {
+    padding: 1vh;
     color: var(--color-secondary);
-    padding: 1em;
-    img
-    {
-        height: 40px;
-        width: auto;
-        cursor: pointer;
-    }
+  }
+  display: flex;
+  color: var(--color-secondary);
+  padding: 1em;
+
+  img {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+  }
 }
