@@ -74,3 +74,8 @@ input:focus {
   box-shadow: 0 3px 10px var(--color-tertiary);
   border-radius: 7px;
 }
+
+.breaker
+{
+  flex: 1;
+}
