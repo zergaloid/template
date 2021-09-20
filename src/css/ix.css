@@ -1,8 +1,13 @@
 @import "reset.css";
+@import "vars.css";
 
 html {
   height: 100%;
   width: 100%;
+}
+
+:root {
+  height: 100%;
 }
 
 @keyframes background {
@@ -27,15 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--color-primary-darker);
-}
-
-:root {
-  height: 100%;
-  --color-primary: #3c91e6;
-  --color-primary-darker: #092948;
-  --color-secondary: #ffebf2;
-  --color-tertiary: #d5265b;
-  --color-tertiary-darker: #1e1e1e;
 }
 
 a {
@@ -77,11 +73,4 @@ input:active,
 input:focus {
   box-shadow: 0 3px 10px var(--color-tertiary);
   border-radius: 7px;
-}
-
-.breaker {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
