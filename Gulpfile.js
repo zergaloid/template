@@ -25,12 +25,13 @@ let sources =
 
 function css() {
   const postcss = require('gulp-postcss')
+
   src(sources.css[0])
-    .pipe(postcss([require('autoprefixer'), require('postcss-nested')]))
+    .pipe(postcss([require("postcss-import"), require('postcss-nested'), require('postcss-mixins'), require('postcss-css-variables'), require('autoprefixer')]))
     .pipe(dest(`${output}/css`))
 
   return src(sources.css[1])
-    .pipe(postcss([require('autoprefixer'), require('postcss-nested')]))
+    .pipe(postcss([require("postcss-import"), require('postcss-nested'), require('postcss-mixins'), require('postcss-css-variables'), require('autoprefixer')]))
     .pipe(dest(`${output}/css`))
 }
 
