@@ -16,12 +16,10 @@
     "gulp-uglify": "^3.0.2",
     "gulp-web-include": "^1.0.1",
     "postcss-css-variables": "^0.18.0",
+    "gulp-htmlmin": "^5.0.1"
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.6",
     "sirv-cli": "^1.0.14"
-  },
-  "dependencies": {
-    "gulp-htmlmin": "^5.0.1"
   }
 }
