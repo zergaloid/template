@@ -1,7 +1,7 @@
 {
     "name": "TODO",
     "short_name": "TODO",
-    "start_url": "/app.html",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#",
     "lang": "en",

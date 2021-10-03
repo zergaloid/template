@@ -43,7 +43,7 @@ function html() {
   const importer = require('gulp-web-include');
 
   return src(sources.html[0])
-    .pipe(importer('./src/html/', "html"))
+    .pipe(importer('./src/html/'))
     .pipe(require('gulp-htmlmin')({ collapseWhitespace: true }))
     .pipe(dest(output));
 }
