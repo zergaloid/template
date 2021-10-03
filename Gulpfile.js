@@ -3,6 +3,8 @@
 const gulp = require('gulp');
 const { watch, src, dest } = gulp
 
+const include = require('gulp-web-include');
+
 let output = "./public/"
 let sources =
 {
@@ -40,10 +42,8 @@ function img() {
 }
 
 function html() {
-  const importer = require('gulp-web-include');
-
   return src(sources.html[0])
-    .pipe(importer('./src/html/'))
+    .pipe(include('./src/html/'))
     .pipe(require('gulp-htmlmin')({ collapseWhitespace: true }))
     .pipe(dest(output));
 }
@@ -55,6 +55,7 @@ function js() {
     .pipe(dest(output))
 
   return src(sources.js[1])
+    .pipe(include('./src/'))
     .pipe(uglify())
     .pipe(dest(output));
 }
