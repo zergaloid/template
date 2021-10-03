@@ -3,12 +3,18 @@
   "scripts": {
     "dev:web": "gulp",
     "show:web": "sirv public --dev",
-    "web": "npm run dev:web & npm run show:web"
+    "web": "npm run dev:web & npm run show:web",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-image": "^6.2.1",
     "gulp-imagemin": "7.0.0",
     "gulp-postcss": "^9.0.1",
@@ -16,7 +22,6 @@
     "gulp-uglify": "^3.0.2",
     "gulp-web-include": "^1.0.1",
     "postcss-css-variables": "^0.18.0",
-    "gulp-htmlmin": "^5.0.1",
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.6",

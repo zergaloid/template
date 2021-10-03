@@ -4,5 +4,5 @@ workbox.routing.registerRoute(
   new RegExp('.*'),
   workbox.strategies.networkFirst({
     cacheName: 'cache',
-  })
+  }),
 );
