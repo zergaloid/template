@@ -50,12 +50,16 @@ function html() {
 
 function js() {
   const uglify = require('gulp-uglify')
-
+  const babel = require('gulp-babel');
+  
   src(sources.js[0])
     .pipe(dest(output))
 
   return src(sources.js[1])
     .pipe(include('./src/'))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(uglify())
     .pipe(dest(output));
 }
