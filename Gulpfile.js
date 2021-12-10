@@ -21,7 +21,8 @@ let sources =
   ],
   css: [
     "./src/css/ix.css",
-    "./src/css/*/*.css"
+    "./src/css/*/*.css",
+    "./src/css/*.css"
   ]
 }
 
@@ -49,7 +50,6 @@ function html() {
 }
 
 function js() {
-  const uglify = require('gulp-uglify')
   const babel = require('gulp-babel');
   
   src(sources.js[0])
@@ -60,7 +60,6 @@ function js() {
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(uglify())
     .pipe(dest(output));
 }
 
@@ -78,5 +77,7 @@ exports.default = function () {
   // CSS and images
   watch(sources.css[0], css)
   watch(sources.css[1], css)
+  watch(sources.css[2], css)
   watch(sources.img[0], img)
 }
+

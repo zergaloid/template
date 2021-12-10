@@ -11,6 +11,7 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "autoprefixer": "^10.3.4",
+    "babel-preset-minify": "^0.5.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
@@ -22,13 +23,11 @@
     "gulp-imagemin": "7.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-purgecss": "^4.0.3",
-    "gulp-uglify": "3.0.2",
     "gulp-web-include": "^1.0.1",
     "postcss-css-variables": "^0.18.0",
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.6",
     "sirv-cli": "^1.0.14"
-  },
-  "dependencies": {}
+  }
 }

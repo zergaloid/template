@@ -1,0 +1,5 @@
+{
+    "comments": false,
+    "sourceType": "script",
+    "presets": ["minify"]
+}
