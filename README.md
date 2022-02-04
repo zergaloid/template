@@ -3,6 +3,5 @@
 ## PostCSS + raw HTML + JS
 
 ```
-npm i -g degit
-degit zergaloid/template
+npx degit zergaloid/template
 ```

@@ -1,6 +1,7 @@
 # Node
 *lock*
 node_modules
+rit/package.json
 
 # NPM
 modules

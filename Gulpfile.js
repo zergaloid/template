@@ -56,7 +56,6 @@ function js() {
     .pipe(dest(output))
 
   return src(sources.js[1])
-    .pipe(include('./src/'))
     .pipe(babel({
       presets: ['@babel/env']
     }))
