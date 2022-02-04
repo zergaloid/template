@@ -1,4 +1,4 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./misc/sw.js')
+  navigator.serviceWorker.register('./sw.js')
     .catch((err) => console.error(err));
 }
